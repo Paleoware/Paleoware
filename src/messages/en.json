@@ -1,0 +1,112 @@
+{
+  "Metadata": {
+    "title": "Paleoware | Web creation that leaves a mark",
+    "description": "Paleoware creates bold, strategic and results-driven web experiences for businesses, entrepreneurs and creators."
+  },
+  "LanguageGateway": {
+    "loading": "Preparing the Paleoware experience...",
+    "choose": "Choose language",
+    "spanish": "Espanol",
+    "english": "English"
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Paleoware",
+    "contact": "Contact",
+    "quote": "Request a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "Hero": {
+    "eyebrow": "Digital studio / Strategy / Development",
+    "titleStart": "Paleoware creates websites that",
+    "rotatingWords": [
+      "amplify your sales",
+      "turn visits into action",
+      "elevate your brand",
+      "generate opportunities"
+    ],
+    "description": "We design digital organisms with identity, strategy and technology so your business cannot go unnoticed.",
+    "cta": "Request a quote",
+    "scroll": "Explore Paleoware"
+  },
+  "Intro": {
+    "eyebrow": "Design with purpose",
+    "title": "Premium web design made for your goals.",
+    "description": "We do not make websites to fill empty space. We build experiences that explain your value, connect with your audience and turn attention into momentum.",
+    "detail": "Every project starts with strategy and evolves into a digital presence impossible to ignore."
+  },
+  "Services": {
+    "eyebrow": "Our services",
+    "title": "A digital ecosystem built to grow.",
+    "description": "We combine strategic thinking, design and technology to build a digital presence with its own pulse.",
+    "items": {
+      "strategy": {
+        "title": "We create strategies",
+        "description": "We define the direction, message and opportunities that make your digital presence matter."
+      },
+      "webDesign": {
+        "title": "High-impact web design",
+        "description": "We create fresh, memorable interfaces aligned with your brand's personality."
+      },
+      "seoAnalytics": {
+        "title": "SEO and analytics",
+        "description": "We turn organic visibility and data into decisions that keep improving your growth."
+      },
+      "webCreation": {
+        "title": "Web creation",
+        "description": "We develop fast, responsive websites ready to represent your business."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "We design shopping experiences that are clear, desirable and focused on selling."
+      },
+      "marketing": {
+        "title": "Digital marketing",
+        "description": "We connect creativity, content and campaigns to take your proposal further."
+      }
+    }
+  },
+  "Portfolio": {
+    "eyebrow": "Selected projects",
+    "title": "Specimens in evolution.",
+    "description": "Soon you will be able to explore some of the digital ecosystems we are building.",
+    "items": {
+      "first-specimen": "Project in preparation",
+      "second-specimen": "Project in preparation",
+      "third-specimen": "Project in preparation"
+    }
+  },
+  "Contact": {
+    "eyebrow": "Start the transformation",
+    "title": "Let's talk about your project",
+    "description": "Tell us what you want to build and we will reply with a first strategic view.",
+    "name": "Your name or company name",
+    "email": "Contact email",
+    "phone": "Phone number (optional)",
+    "message": "Describe your project or message",
+    "privacy": "I agree that Paleoware may use this data to answer my enquiry.",
+    "submit": "Send enquiry",
+    "sending": "Sending signal...",
+    "success": "Enquiry received. We will be in touch soon.",
+    "fallback": "The form will be available once EmailJS is configured.",
+    "error": "We could not send your message. Try again or write to us on WhatsApp.",
+    "required": "Required field"
+  },
+  "About": {
+    "eyebrow": "About Paleoware",
+    "title": "We build digital presences with their own identity.",
+    "description": "Paleoware is a web development studio for businesses, entrepreneurs and creators who want more than a template.",
+    "back": "Back to home"
+  },
+  "Footer": {
+    "statement": "Web design and development for brands that want to leave a mark.",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "whatsapp": "Write on WhatsApp"
+  }
+}
