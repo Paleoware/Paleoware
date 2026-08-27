@@ -13,16 +13,15 @@ export async function PortfolioSection() {
     <section className="portfolio-section section-shell" id="portfolio">
       <div className="section-heading">
         <div>
-          <p className="section-kicker">03 / {t('eyebrow')}</p>
+          <p className="section-kicker">{t('eyebrow')}</p>
           <h2>{t('title')}</h2>
         </div>
         <p>{t('description')}</p>
       </div>
       <div className="portfolio-grid">
-        {enabledItems.map((item, index) => (
+        {enabledItems.map((item) => (
           <article className="portfolio-card" key={item.id}>
             <div className="portfolio-card__visual" aria-hidden="true">
-              <span>0{index + 1}</span>
             </div>
             <p>{t(`items.${item.id}`)}</p>
           </article>

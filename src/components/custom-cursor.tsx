@@ -9,7 +9,6 @@ import textImage from '@/Text.png'
 
 export function CustomCursor() {
   const trailRef = useRef<HTMLDivElement>(null)
-  const glowRef = useRef<HTMLSpanElement>(null)
 
   useGSAP((_, contextSafe) => {
     const finePointer = window.matchMedia('(pointer: fine)')
@@ -30,71 +29,66 @@ export function CustomCursor() {
       return
     }
 
-    const glow = glowRef.current
-    if (!glow) {
-      return
-    }
-
-    gsap.set(glow, { xPercent: -50, yPercent: -50, autoAlpha: 0 })
-    const moveGlowX = gsap.quickTo(glow, 'x', { duration: 0.18, ease: 'power3.out' })
-    const moveGlowY = gsap.quickTo(glow, 'y', { duration: 0.18, ease: 'power3.out' })
     let lastSpawn = 0
+    let previousX = 0
+    let previousY = 0
 
     const movePointer = contextSafe((event: MouseEvent) => {
-      moveGlowX(event.clientX)
-      moveGlowY(event.clientY)
-      gsap.to(glow, { autoAlpha: 1, duration: 0.2, overwrite: true })
-
       const now = performance.now()
-      if (now - lastSpawn < 42) {
+      if (now - lastSpawn < 58) {
         return
       }
       lastSpawn = now
 
-      const grain = document.createElement('span')
-      grain.className = 'cursor-sand'
-      trail.appendChild(grain)
+      const deltaX = Math.max(-24, Math.min(24, event.clientX - previousX))
+      const deltaY = Math.max(-24, Math.min(24, event.clientY - previousY))
+      previousX = event.clientX
+      previousY = event.clientY
 
-      const driftX = -18 + Math.random() * 36
-      const driftY = -22 - Math.random() * 30
-      const size = 3 + Math.random() * 7
+      const particleCount = Math.random() > 0.45 ? 3 : 2
 
-      gsap.set(grain, {
-        x: event.clientX,
-        y: event.clientY,
-        width: size,
-        height: size,
-        scale: 0.3,
-        autoAlpha: 0,
-      })
+      for (let index = 0; index < particleCount; index += 1) {
+        const grain = document.createElement('span')
+        grain.className = 'cursor-sand'
+        trail.appendChild(grain)
 
-      gsap.timeline({ onComplete: () => grain.remove() })
-        .to(grain, {
-          autoAlpha: 0.85,
-          scale: 1,
-          duration: 0.12,
-          ease: 'power2.out',
-        })
-        .to(grain, {
-          x: event.clientX + driftX,
-          y: event.clientY + driftY,
-          scale: 0.1,
+        const driftX = -deltaX * 0.65 + (-16 + Math.random() * 32)
+        const driftY = -deltaY * 0.4 - 8 - Math.random() * 18
+        const startX = event.clientX - deltaX * 0.2 + (-5 + Math.random() * 10)
+        const startY = event.clientY - deltaY * 0.2 + (-5 + Math.random() * 10)
+        const size = 0.9 + Math.random() * 1.5
+
+        gsap.set(grain, {
+          x: startX,
+          y: startY,
+          width: size,
+          height: size,
+          scale: 0.35,
           autoAlpha: 0,
-          duration: 1.9,
-          ease: 'power2.out',
         })
-    })
 
-    const hideGlow = contextSafe(() => {
-      gsap.to(glow, { autoAlpha: 0, duration: 0.25, overwrite: true })
+        gsap.timeline({ onComplete: () => grain.remove() })
+          .to(grain, {
+            autoAlpha: 0.35 + Math.random() * 0.3,
+            scale: 1,
+            duration: 0.1,
+            ease: 'power1.out',
+          })
+          .to(grain, {
+            x: startX + driftX,
+            y: startY + driftY,
+            scale: 0.15,
+            autoAlpha: 0,
+            duration: 1.8 + Math.random() * 0.35,
+            ease: 'power2.out',
+          })
+      }
     })
 
     window.addEventListener('mousemove', movePointer, { passive: true })
-    window.addEventListener('blur', hideGlow)
 
     return () => {
       window.removeEventListener('mousemove', movePointer)
-      window.removeEventListener('blur', hideGlow)
       root.classList.remove('has-custom-cursor')
       root.style.removeProperty('--cursor-default')
       root.style.removeProperty('--cursor-pointer')
@@ -105,7 +99,6 @@ export function CustomCursor() {
 
   return (
     <div ref={trailRef} className="cursor-trail" aria-hidden="true">
-      <span ref={glowRef} className="cursor-glow" />
     </div>
   )
 }

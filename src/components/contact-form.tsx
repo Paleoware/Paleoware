@@ -73,7 +73,7 @@ export function ContactForm() {
       </label>
       <div className="contact-form__bottom form-field--wide">
         <button className="button button--primary" type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? t('sending') : t('submit')} <span aria-hidden="true">-&gt;</span>
+          {status === 'sending' ? t('sending') : t('submit')}
         </button>
         <p className="form-status" aria-live="polite">
           {status === 'success' ? t('success') : null}

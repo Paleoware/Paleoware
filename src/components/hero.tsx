@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import heroOne from '@/hero-1.png'
+import heroOne from '@/hero-1.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -109,13 +109,9 @@ export function Hero() {
         </h1>
         <p className="hero-copy__description">{t('description')}</p>
         <Link className="button button--primary" href="#contact">
-          {t('cta')} <span aria-hidden="true">-&gt;</span>
+          {t('cta')}
         </Link>
       </div>
-      <a className="hero-scroll" href="#intro">
-        <span className="hero-scroll__line" aria-hidden="true" />
-        <span>{t('scroll')}</span>
-      </a>
     </section>
   )
 }

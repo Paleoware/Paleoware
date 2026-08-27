@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import arrow from '@/Arrow.webp'
 
 export function ScrollToTop() {
   const t = useTranslations('Footer')
@@ -22,7 +24,7 @@ export function ScrollToTop() {
       aria-label={t('backToTop')}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      <span aria-hidden="true">^</span>
+      <Image src={arrow} alt="" width={20} height={21} />
     </button>
   )
 }

@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import logo from '@/Paleoware-logo-completo.webp'
 
 export function LanguageGateway() {
   useEffect(() => {
@@ -15,7 +17,7 @@ export function LanguageGateway() {
 
   return (
     <main className="language-gateway">
-      <div className="language-gateway__mark">P/</div>
+      <Image className="language-gateway__logo" src={logo} alt="Paleoware" width={320} height={180} priority />
       <p>Preparing the Paleoware experience...</p>
       <div className="language-gateway__links">
         <Link href="/es/">Espanol</Link>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import logo from '@/Paleoware-logo-completo.png'
+import logo from '@/Paleoware-logo-completo.webp'
 
 type SiteHeaderProps = Readonly<{ locale: string }>
 

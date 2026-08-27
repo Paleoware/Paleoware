@@ -29,8 +29,7 @@
       "generate opportunities"
     ],
     "description": "We design digital organisms with identity, strategy and technology so your business cannot go unnoticed.",
-    "cta": "Request a quote",
-    "scroll": "Explore Paleoware"
+    "cta": "Request a quote"
   },
   "Intro": {
     "eyebrow": "Design with purpose",
@@ -83,6 +82,9 @@
     "eyebrow": "Start the transformation",
     "title": "Let's talk about your project",
     "description": "Tell us what you want to build and we will reply with a first strategic view.",
+    "quoteNote": "The initial enquiry and quote are free, with no obligation.",
+    "whatsappLabel": "Write to us on WhatsApp",
+    "emailLabel": "Send an email",
     "name": "Your name or company name",
     "email": "Contact email",
     "phone": "Phone number (optional)",

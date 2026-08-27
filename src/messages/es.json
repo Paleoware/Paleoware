@@ -29,8 +29,7 @@
       "generan oportunidades"
     ],
     "description": "Diseñamos organismos digitales con identidad, estrategia y tecnologia para que tu negocio no pase desapercibido.",
-    "cta": "Solicitar presupuesto",
-    "scroll": "Explorar Paleoware"
+    "cta": "Solicitar presupuesto"
   },
   "Intro": {
     "eyebrow": "Diseño con proposito",
@@ -83,6 +82,9 @@
     "eyebrow": "Inicia la transformacion",
     "title": "Hablemos de tu proyecto",
     "description": "Cuéntanos qué quieres construir y te responderemos con una primera mirada estrategica.",
+    "quoteNote": "La consulta y el presupuesto inicial son sin cargo y sin compromiso.",
+    "whatsappLabel": "Escribinos por WhatsApp",
+    "emailLabel": "Enviar un email",
     "name": "Tu nombre o el de tu empresa",
     "email": "Mail de contacto",
     "phone": "Numero de telefono (opcional)",

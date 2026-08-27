@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import facebook from '@/Facebook.png'
-import instagram from '@/Instagram.png'
+import facebook from '@/Facebook.webp'
+import instagram from '@/Instagram.webp'
+import logo from '@/Paleoware-logo-completo.webp'
+import whatsapp from '@/Whatsapp.webp'
 import { siteConfig } from '@/config/site'
 
 type FooterProps = Readonly<{ locale: string }>
@@ -15,7 +17,9 @@ export function Footer({ locale }: FooterProps) {
     <footer className="site-footer">
       <div className="section-shell site-footer__inner">
         <div>
-          <Link className="site-footer__logo" href={`/${locale}/`}>P/</Link>
+          <Link className="site-footer__logo" href={`/${locale}/`}>
+            <Image src={logo} alt="Paleoware" width={260} height={146} />
+          </Link>
           <p>{t('statement')}</p>
         </div>
         <div className="site-footer__links">
@@ -26,7 +30,7 @@ export function Footer({ locale }: FooterProps) {
             <Image src={facebook} alt="" width={24} height={24} /> {t('facebook')}
           </a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer">
-            <span className="social-placeholder" aria-hidden="true">W</span> {t('whatsapp')}
+            <Image src={whatsapp} alt="" width={24} height={25} /> {t('whatsapp')}
           </a>
         </div>
         <small>© {new Date().getFullYear()} Paleoware. {t('rights')}</small>

@@ -5,6 +5,10 @@ export const siteConfig = {
     number: '541134117299',
     message: 'Hola, quiero solicitar un presupuesto para mi proyecto web.',
   },
+  contact: {
+    email: 'info@paleoware.com',
+    phoneDisplay: '+54 11 3411-7299',
+  },
   socialLinks: {
     instagram: 'https://www.instagram.com/paleoware',
     facebook: 'https://www.facebook.com/paleoware',
@@ -18,12 +22,12 @@ export const featureConfig = {
 }
 
 export const services = [
-  { id: 'strategy', enabled: true, number: '01' },
-  { id: 'webDesign', enabled: true, number: '02' },
-  { id: 'seoAnalytics', enabled: true, number: '03' },
-  { id: 'webCreation', enabled: true, number: '04' },
-  { id: 'ecommerce', enabled: true, number: '05' },
-  { id: 'marketing', enabled: true, number: '06' },
+  { id: 'strategy', enabled: true, icon: 'compass' },
+  { id: 'webDesign', enabled: true, icon: 'layout' },
+  { id: 'seoAnalytics', enabled: true, icon: 'chart' },
+  { id: 'webCreation', enabled: true, icon: 'code' },
+  { id: 'ecommerce', enabled: true, icon: 'cart' },
+  { id: 'marketing', enabled: true, icon: 'megaphone' },
 ] as const
 
 export const portfolioItems = [
