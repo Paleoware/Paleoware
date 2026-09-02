@@ -5,15 +5,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/Paleoware-logo-completo.webp'
 
-export function LanguageGateway() {
+type LanguageGatewayProps = Readonly<{
+  basePath: string
+}>
+
+export function LanguageGateway({ basePath }: LanguageGatewayProps) {
   useEffect(() => {
     const savedLocale = window.localStorage.getItem('paleoware-locale')
     const browserLocale = navigator.language.toLowerCase().startsWith('es')
       ? 'es'
       : 'en'
+    const locale = savedLocale === 'es' || savedLocale === 'en' ? savedLocale : browserLocale
+    const normalizedBasePath = basePath
+      ? `/${basePath.replace(/^\/+|\/+$/g, '')}`
+      : ''
 
-    window.location.replace(`/${savedLocale === 'es' || savedLocale === 'en' ? savedLocale : browserLocale}/`)
-  }, [])
+    window.location.replace(`${normalizedBasePath}/${locale}/`)
+  }, [basePath])
 
   return (
     <main className="language-gateway">

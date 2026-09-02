@@ -45,6 +45,7 @@ The first release is a static website. It does not have a database, authenticati
 `src/config/site.ts` controls content that is not translated:
 
 - `siteConfig` contains the domain, WhatsApp number, WhatsApp message and social URLs.
+- The configured WhatsApp number, `info@paleoware.com` contact email, Instagram URL and Facebook URL are the confirmed production contact data. Do not replace them with placeholders.
 - `featureConfig.showPortfolio` controls the whole portfolio section.
 - Each service in `services` has an `enabled` flag.
 - Each portfolio entry in `portfolioItems` has an `enabled` flag.
@@ -55,8 +56,10 @@ Use stable IDs in configuration and keep their translated labels in the message 
 
 - `src/app/globals.css` owns the global design tokens, layout primitives, responsive breakpoints, cursor rules and keyframes.
 - `src/components/hero.tsx` owns the hero copy, rotating words, hero imagery and GSAP parallax.
-- `hero-1.png` is the active hero image. `hero-2.png` is an unused visual experiment and must not be rendered unless explicitly requested.
+- `hero-1.webp` is the active hero image. `hero-2.png` is an unused visual experiment and must not be rendered unless explicitly requested.
 - `Cursor.png`, `Pointer.png` and `Text.png` are the custom cursor assets.
+- The mobile menu uses two rotated instances of `Text.png` as its bone icon. Preserve its accessible button label and `aria-expanded` state.
+- The contact section uses normal vertical document flow. Do not reintroduce a horizontal contact transition unless explicitly requested.
 - Large hero images can later be converted to WebP. Cursor assets should remain in a format with reliable transparency and cursor support.
 - Avoid stacking nearly identical hero images because it creates ghosting and apparent blur.
 - Avoid excessive blur, backdrop filters and particle DOM nodes on mobile.
@@ -68,6 +71,28 @@ Use stable IDs in configuration and keep their translated labels in the message 
 - Never commit private credentials. EmailJS public identifiers and the GA measurement ID are build-time browser values.
 - The form includes a honeypot and a privacy checkbox.
 - Analytics only renders when `NEXT_PUBLIC_GA_ID` exists. Review consent requirements before the global public launch.
+
+### Analytics Events
+
+`src/lib/analytics.ts` exports `trackEvent()` which sends events to GA4 via `sendGAEvent` from `@next/third-parties/google`.
+
+Tracked events:
+
+| Event | Component | Trigger |
+|-------|-----------|---------|
+| `form_submit` | `contact-form.tsx` | Successful form submission |
+| `form_submit_error` | `contact-form.tsx` | Form submission error |
+| `whatsapp_click` | `contact-option-link.tsx`, `whatsapp-button.tsx`, `footer.tsx` | Click on WhatsApp link |
+| `email_click` | `contact-option-link.tsx` | Click on email link |
+| `cta_click` | `hero.tsx`, `site-header.tsx` | Click on CTA buttons |
+| `nav_click` | `site-header.tsx` | Click on navigation links |
+| `language_switch` | `site-header.tsx` | Language selector click |
+| `social_click` | `footer.tsx` | Click on Instagram/Facebook |
+| `scroll_to_top` | `scroll-to-top.tsx` | Click on scroll-to-top button |
+
+GA4 automatically tracks: engagement rate, traffic sources, user location (country/city), session duration, scroll depth to 90%.
+
+`src/components/contact-option-link.tsx` is a Client Component wrapper for contact links that sends tracking events on click.
 
 ## GitHub Pages
 

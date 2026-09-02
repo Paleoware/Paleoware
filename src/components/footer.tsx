@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
@@ -6,6 +8,7 @@ import instagram from '@/Instagram.webp'
 import logo from '@/Paleoware-logo-completo.webp'
 import whatsapp from '@/Whatsapp.webp'
 import { siteConfig } from '@/config/site'
+import { trackEvent } from '@/lib/analytics'
 
 type FooterProps = Readonly<{ locale: string }>
 
@@ -23,13 +26,13 @@ export function Footer({ locale }: FooterProps) {
           <p>{t('statement')}</p>
         </div>
         <div className="site-footer__links">
-          <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer">
+          <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer" onClick={() => trackEvent('social_click', { platform: 'instagram' })}>
             <Image src={instagram} alt="" width={24} height={24} /> {t('instagram')}
           </a>
-          <a href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer">
+          <a href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer" onClick={() => trackEvent('social_click', { platform: 'facebook' })}>
             <Image src={facebook} alt="" width={24} height={24} /> {t('facebook')}
           </a>
-          <a href={whatsappUrl} target="_blank" rel="noreferrer">
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={() => trackEvent('whatsapp_click', { location: 'footer' })}>
             <Image src={whatsapp} alt="" width={24} height={25} /> {t('whatsapp')}
           </a>
         </div>

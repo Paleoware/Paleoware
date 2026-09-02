@@ -38,7 +38,7 @@ export function IntroSection() {
 
       rings.forEach((ring, index) => {
         gsap.to(ring, {
-          yPercent: index % 2 === 0 ? -12 : 12,
+          y: index % 2 === 0 ? -34 : 34,
           rotation: index % 2 === 0 ? 10 : -8,
           ease: 'none',
           scrollTrigger: {
@@ -46,6 +46,7 @@ export function IntroSection() {
             start: 'top bottom',
             end: 'bottom top',
             scrub: 1.5 + index * 0.3,
+            invalidateOnRefresh: true,
           },
         })
       })

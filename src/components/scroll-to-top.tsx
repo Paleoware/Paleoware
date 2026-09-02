@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import arrow from '@/Arrow.webp'
+import { trackEvent } from '@/lib/analytics'
 
 export function ScrollToTop() {
   const t = useTranslations('Footer')
@@ -22,7 +23,7 @@ export function ScrollToTop() {
       className={`scroll-top${visible ? ' scroll-top--visible' : ''}`}
       type="button"
       aria-label={t('backToTop')}
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      onClick={() => { trackEvent('scroll_to_top'); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
     >
       <Image src={arrow} alt="" width={20} height={21} />
     </button>

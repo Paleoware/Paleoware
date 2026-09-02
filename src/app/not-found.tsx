@@ -2,59 +2,46 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef } from 'react'
-import { useTranslations } from 'next-intl'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import heroOne from '@/hero-1.webp'
-import { trackEvent } from '@/lib/analytics'
+import esMessages from '@/messages/es.json'
+import enMessages from '@/messages/en.json'
 
-export function Hero() {
-  const t = useTranslations('Hero')
+const messages = { es: esMessages, en: enMessages } as const
+
+function detectLocale(): 'es' | 'en' {
+  if (typeof window === 'undefined') return 'es'
+  const saved = localStorage.getItem('paleoware-locale')
+  if (saved === 'es' || saved === 'en') return saved
+  return navigator.language.startsWith('en') ? 'en' : 'es'
+}
+
+export default function NotFound() {
+  const [locale, setLocale] = useState<'es' | 'en'>(detectLocale)
   const heroRef = useRef<HTMLElement>(null)
-  const words = t.raw('rotatingWords') as string[]
+
+  useEffect(() => {
+    const handleStorage = () => {
+      const saved = localStorage.getItem('paleoware-locale')
+      if (saved === 'es' || saved === 'en') {
+        setLocale((prev) => (prev === saved ? prev : saved))
+      }
+    }
+
+    window.addEventListener('storage', handleStorage)
+    return () => window.removeEventListener('storage', handleStorage)
+  }, [])
+
+  const t = messages[locale].NotFound
 
   useGSAP(() => {
     const media = gsap.matchMedia()
 
     media.add('(prefers-reduced-motion: no-preference)', () => {
-      const wordNodes = gsap.utils.toArray<HTMLElement>('.hero-rotating-word')
       const breathingLayer = heroRef.current?.querySelector('.hero-visual__breath')
       const eyeGlow = heroRef.current?.querySelector('.hero-eye-glow')
-
-      wordNodes.forEach((word) => {
-        gsap.set(word, { autoAlpha: 0 })
-      })
-
-      const timeline = gsap.timeline({ repeat: -1, repeatDelay: 0.65 })
-
-      wordNodes.forEach((word) => {
-        const characters = word.querySelectorAll('.hero-char')
-
-        timeline
-          .to(word, { autoAlpha: 1, duration: 0.1 })
-          .fromTo(
-            characters,
-            { opacity: 0, yPercent: 105 },
-            {
-              opacity: 1,
-              yPercent: 0,
-              duration: 0.45,
-              stagger: 0.025,
-              ease: 'power3.out',
-            },
-            '<',
-          )
-          .to({}, { duration: 1.9 })
-          .to(characters, {
-            opacity: 0,
-            yPercent: -80,
-            duration: 0.3,
-            stagger: 0.015,
-            ease: 'power2.in',
-          })
-          .set(word, { autoAlpha: 0 })
-      })
 
       gsap.from('.hero-copy > *', {
         opacity: 0,
@@ -85,14 +72,13 @@ export function Hero() {
           ease: 'sine.inOut',
         })
       }
-
     })
 
     return () => media.revert()
   }, { scope: heroRef })
 
   return (
-    <section className="hero" ref={heroRef} aria-labelledby="hero-title">
+    <section className="hero" ref={heroRef} aria-labelledby="not-found-title">
       <div className="hero-halos" aria-hidden="true">
         <span className="hero-halo hero-halo--upper" />
         <span className="hero-halo hero-halo--middle" />
@@ -112,33 +98,22 @@ export function Hero() {
         </div>
       </div>
       <div className="hero-copy section-shell">
-        <p className="section-kicker">{t('eyebrow')}</p>
-        <h1 id="hero-title">
-          {t('titleStart')}{' '}
-          <span className="hero-rotating-words" aria-hidden="true">
-            {words.map((word) => (
-              <span className="hero-rotating-word" key={word}>
-                {word.split('').map((character, index) => (
-                  <span className="hero-char" key={`${word}-${index}`}>
-                    {character === ' ' ? '\u00a0' : character}
-                  </span>
-                ))}
-              </span>
-            ))}
-          </span>
-          <span className="sr-only">{words.join(', ')}</span>
-        </h1>
-        <p className="hero-copy__description">{t('description')}</p>
+        <p className="section-kicker">{t.eyebrow}</p>
+        <div className="not-found-404" id="not-found-title" aria-hidden="true">
+          {t.title}
+        </div>
+        <h1 className="not-found-subtitle">{t.subtitle}</h1>
+        <p className="not-found-heading">{t.heading}</p>
+        <p className="hero-copy__description">{t.description}</p>
         <Link
           className="button button--primary hero-cta holographic-target"
-          href="#contact"
-          onClick={() => trackEvent('cta_click', { location: 'hero' })}
+          href={`/${locale}/`}
         >
           <span className="button__scan-window" aria-hidden="true">
             <span className="button__scan" />
           </span>
           <span className="button__portal" aria-hidden="true" />
-          <span className="button__label">{t('cta')}</span>
+          <span className="button__label">{t.cta}</span>
         </Link>
       </div>
     </section>

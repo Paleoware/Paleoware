@@ -20,6 +20,8 @@ npm run dev
 
 La raiz `/` detecta el idioma del navegador y redirige a `/es/` o `/en/`. Tambien se puede elegir manualmente desde el selector de idioma.
 
+`NEXT_PUBLIC_BASE_PATH` debe quedar vacia para desarrollo local y Cloudflare Pages. El workflow de GitHub Pages la define como `/Paleoware` porque ese sitio se publica bajo el nombre del repositorio.
+
 ## Configuracion
 
 Define estas variables en `.env.local` y completa los identificadores cuando existan las cuentas de EmailJS y Google Analytics. Son identificadores publicos para el navegador, no contraseñas.

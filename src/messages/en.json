@@ -110,5 +110,13 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "whatsapp": "Write on WhatsApp"
+  },
+  "NotFound": {
+    "eyebrow": "Digital studio / Strategy / Development",
+    "title": "404",
+    "subtitle": "Page not found",
+    "heading": "Looks like you ventured too far.",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "cta": "Back to home"
   }
 }

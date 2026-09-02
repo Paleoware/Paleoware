@@ -3,6 +3,7 @@
 import emailjs from '@emailjs/browser'
 import { FormEvent, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { trackEvent } from '@/lib/analytics'
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error' | 'unconfigured'
 
@@ -40,8 +41,10 @@ export function ContactForm() {
       await emailjs.sendForm(serviceId, templateId, form)
       form.reset()
       setStatus('success')
+      trackEvent('form_submit')
     } catch {
       setStatus('error')
+      trackEvent('form_submit_error')
     }
   }
 
@@ -72,8 +75,14 @@ export function ContactForm() {
         <span>{t('privacy')}</span>
       </label>
       <div className="contact-form__bottom form-field--wide">
-        <button className="button button--primary" type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? t('sending') : t('submit')}
+        <button className="button button--primary holographic-target" type="submit" disabled={status === 'sending'}>
+          <span className="button__scan-window" aria-hidden="true">
+            <span className="button__scan" />
+          </span>
+          <span className="button__portal" aria-hidden="true" />
+          <span className="button__label">
+            {status === 'sending' ? t('sending') : t('submit')}
+          </span>
         </button>
         <p className="form-status" aria-live="polite">
           {status === 'success' ? t('success') : null}
