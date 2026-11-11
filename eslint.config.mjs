@@ -9,6 +9,7 @@ export default defineConfig([
     '.next/**',
     'out/**',
     'node_modules/**',
+    '.agents/**',
     'next-env.d.ts',
   ]),
 ])

@@ -6,6 +6,7 @@ import {
   setRequestLocale,
 } from 'next-intl/server'
 import { notFound } from 'next/navigation'
+import { LocaleLang } from '@/components/locale-lang'
 import { routing } from '@/i18n/routing'
 
 type LocaleLayoutProps = Readonly<{
@@ -29,7 +30,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Metadata' })
 
   return {
-    title: t('title'),
+    title: { absolute: t('title') },
     description: t('description'),
     alternates: {
       canonical: `/${locale}`,
@@ -59,9 +60,14 @@ export default async function LocaleLayout({
   // This keeps localized Server Components statically rendered at build time.
   setRequestLocale(locale)
   const messages = await getMessages()
+  const t = await getTranslations({ locale, namespace: 'Navigation' })
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <a className="skip-link" href="#contenido">
+        {t('skip')}
+      </a>
+      <LocaleLang locale={locale} />
       {children}
     </NextIntlClientProvider>
   )

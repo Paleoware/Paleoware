@@ -16,22 +16,3 @@ export const siteConfig = {
     tiktok: '',
   },
 }
-
-export const featureConfig = {
-  showPortfolio: false,
-}
-
-export const services = [
-  { id: 'strategy', enabled: true, icon: 'compass' },
-  { id: 'webDesign', enabled: true, icon: 'layout' },
-  { id: 'seoAnalytics', enabled: true, icon: 'chart' },
-  { id: 'webCreation', enabled: true, icon: 'code' },
-  { id: 'ecommerce', enabled: true, icon: 'cart' },
-  { id: 'marketing', enabled: true, icon: 'megaphone' },
-] as const
-
-export const portfolioItems = [
-  { id: 'first-specimen', enabled: false },
-  { id: 'second-specimen', enabled: false },
-  { id: 'third-specimen', enabled: false },
-] as const

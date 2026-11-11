@@ -1,122 +1,270 @@
 {
   "Metadata": {
-    "title": "Paleoware | Creacion web que deja huella",
-    "description": "Paleoware crea experiencias web vistosas, estrategicas y orientadas a resultados para empresas, emprendedores y creadores."
+    "title": "Paleoware — Sitios a medida que no se confunden con el resto",
+    "description": "Estudio de diseño y desarrollo web en Lanús. Sitios a medida para proyectos que necesitan una presencia que no se parezca a todas las demás."
   },
   "LanguageGateway": {
-    "loading": "Preparando la experiencia Paleoware...",
+    "loading": "Preparando la señal…",
     "choose": "Elegir idioma",
-    "spanish": "Espanol",
+    "spanish": "Español",
     "english": "English"
   },
   "Navigation": {
-    "home": "Inicio",
     "services": "Servicios",
-    "about": "Sobre Paleoware",
+    "faq": "Preguntas",
     "contact": "Contacto",
-    "quote": "Solicitar presupuesto",
-    "openMenu": "Abrir menu",
-    "closeMenu": "Cerrar menu",
-    "language": "Idioma"
+    "quote": "Hablemos",
+    "menu": "Menú",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma",
+    "toggleTheme": "Cambiar entre modo oscuro y claro",
+    "home": "Paleoware, ir al inicio",
+    "skip": "Saltar al contenido"
   },
   "Hero": {
-    "eyebrow": "Estudio digital / Estrategia / Desarrollo",
-    "titleStart": "Paleoware crea paginas web que",
-    "rotatingWords": [
-      "amplifican tus ventas",
-      "convierten visitas",
-      "elevan tu marca",
-      "generan oportunidades"
+    "titlePrefix": "Paleoware construye webs que",
+    "phrases": [
+      "convierten visitas en ventas",
+      "aumentan tu visibilidad",
+      "te hacen difícil de olvidar",
+      "crecen con tu negocio",
+      "se ven tan bien como funcionan"
     ],
-    "description": "Diseñamos organismos digitales con identidad, estrategia y tecnologia para que tu negocio no pase desapercibido.",
-    "cta": "Solicitar presupuesto"
-  },
-  "Intro": {
-    "eyebrow": "Diseño con proposito",
-    "title": "Diseño web premium a medida, orientado a generar resultados.",
-    "description": "No hacemos paginas para llenar espacios. Construimos experiencias que explican tu valor, conectan con tu audiencia y convierten atencion en movimiento.",
-    "detail": "Cada proyecto nace de una estrategia y evoluciona hasta convertirse en una presencia digital imposible de ignorar."
+    "lead": "Diseño y desarrollo a medida para proyectos que necesitan una presencia que no se confunda con el resto.",
+    "cta": "Hablemos de tu proyecto"
   },
   "Services": {
-    "eyebrow": "Nuestros servicios",
-    "title": "Un ecosistema digital preparado para crecer.",
-    "description": "Combinamos pensamiento estrategico, diseño y tecnologia para construir una presencia digital con pulso propio.",
+    "title": "Seis servicios, tres capas.",
+    "lead": "Cada capa resuelve una parte distinta del mismo problema: qué decir, cómo construirlo y cómo hacerlo crecer.",
+    "cta": "Ver las seis fichas",
+    "families": {
+      "define": {
+        "name": "Definir"
+      },
+      "build": {
+        "name": "Construir"
+      },
+      "grow": {
+        "name": "Crecer"
+      }
+    },
     "items": {
       "strategy": {
-        "title": "Generamos estrategias",
-        "description": "Definimos el rumbo, el mensaje y las oportunidades que hacen que tu presencia digital tenga sentido."
+        "name": "Estrategia",
+        "promise": "Rumbo, mensaje y prioridades."
       },
       "webDesign": {
-        "title": "Diseño web de alto impacto",
-        "description": "Creamos interfaces novedosas, memorables y alineadas con la personalidad de tu marca."
-      },
-      "seoAnalytics": {
-        "title": "SEO y analitica",
-        "description": "Convertimos datos y visibilidad organica en decisiones para seguir mejorando."
+        "name": "Diseño web",
+        "promise": "Una interfaz con identidad propia."
       },
       "webCreation": {
-        "title": "Creacion de webs",
-        "description": "Desarrollamos sitios rapidos, responsive y preparados para representar tu negocio."
+        "name": "Creación de webs",
+        "promise": "Un sitio rápido y mantenible."
       },
       "ecommerce": {
-        "title": "E-commerce",
-        "description": "Diseñamos experiencias de compra claras, deseables y enfocadas en vender."
+        "name": "E-commerce",
+        "promise": "Una compra clara y deseable."
+      },
+      "seoAnalytics": {
+        "name": "SEO y analítica",
+        "promise": "Visibilidad que se puede medir."
       },
       "marketing": {
-        "title": "Marketing digital",
-        "description": "Conectamos creatividad, contenido y campañas para llevar tu propuesta mas lejos."
+        "name": "Marketing digital",
+        "promise": "Contenido y campañas con rumbo."
       }
     }
   },
-  "Portfolio": {
-    "eyebrow": "Proyectos seleccionados",
-    "title": "Especimenes en evolucion.",
-    "description": "Pronto vas a poder explorar algunos de los ecosistemas digitales que estamos construyendo.",
+  "Process": {
+    "title": "Cómo se desarrolla una web.",
+    "lead": "Cuatro fases. Sin sorpresas y sin reuniones que no terminan en algo.",
+    "phases": {
+      "dig": {
+        "name": "Descubrimiento",
+        "desc": "Entrevista, objetivos y alcance. Definimos qué tiene que lograr el sitio antes de dibujar nada."
+      },
+      "classify": {
+        "name": "Estructura",
+        "desc": "Arquitectura, contenidos y referencias. Ordenamos el material y decidimos qué se cuenta en cada pantalla."
+      },
+      "assemble": {
+        "name": "Diseño y desarrollo",
+        "desc": "Diseño y desarrollo sobre la estructura aprobada. Dos rondas de revisión, sin cambios infinitos."
+      },
+      "hatch": {
+        "name": "Publicación",
+        "desc": "Publicación, analítica y una sesión para que puedas actualizar el contenido sin depender de nosotros."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "Cuatro puntos de partida.",
+    "lead": "Precios de partida en pesos argentinos. El presupuesto final se ajusta después de una llamada de veinte minutos.",
+    "from": "desde",
+    "currency": "ARS",
+    "tiers": {
+      "prospecting": {
+        "name": "Prospección",
+        "price": "200.000",
+        "items": [
+          "Landing de una página",
+          "Un idioma"
+        ]
+      },
+      "afloramiento": {
+        "name": "Afloramiento",
+        "price": "400.000",
+        "items": [
+          "Hasta 5 páginas",
+          "Un idioma",
+          "Analítica incluida"
+        ]
+      },
+      "excavacion": {
+        "name": "Excavación",
+        "price": "800.000",
+        "items": [
+          "De 6 a 10 páginas",
+          "Dos idiomas",
+          "Analítica incluida"
+        ]
+      },
+      "holotipo": {
+        "name": "Holotipo",
+        "price": "1.200.000",
+        "items": [
+          "Más de 10 páginas o e-commerce",
+          "Dos idiomas",
+          "Analítica incluida"
+        ]
+      }
+    },
+    "note": "Los importes son de partida y no incluyen dominio ni hosting. Todo queda por escrito antes de empezar."
+  },
+  "Faq": {
+    "title": "Preguntas antes de empezar.",
+    "lead": "Lo que suele frenar una decisión.",
+    "cta": "¿No está tu pregunta?",
     "items": {
-      "first-specimen": "Proyecto en preparacion",
-      "second-specimen": "Proyecto en preparacion",
-      "third-specimen": "Proyecto en preparacion"
+      "time": {
+        "q": "¿Cuánto tarda un sitio?",
+        "a": "Entre dos y doce semanas según el alcance. La landing más simple lleva dos; un sitio con e-commerce y dos idiomas puede llevar tres meses. El plazo se acuerda por escrito antes de arrancar."
+      },
+      "start": {
+        "q": "¿Qué necesito para empezar?",
+        "a": "Una idea de qué querés lograr y una referencia de lo que te gusta. Si no tenés logo, textos ni fotos, también podemos resolverlo: es parte del trabajo, no un requisito previo."
+      },
+      "existing": {
+        "q": "Ya tengo una web. ¿Se puede rehacer?",
+        "a": "Sí, y suele ser más rápido que empezar de cero. Revisamos qué funciona, qué conviene conservar y qué se reemplaza. El contenido existente se migra, no se pierde."
+      },
+      "content": {
+        "q": "¿Quién escribe los textos?",
+        "a": "Nosotros, a partir de una entrevista y de lo que ya tengas. Si preferís escribirlos vos, los editamos para que funcionen en pantalla. Nunca publicamos texto de relleno."
+      },
+      "remote": {
+        "q": "¿Trabajan con proyectos de otras ciudades?",
+        "a": "Sí. Todo el proceso se hace por videollamada y enlaces compartidos. La base está en Lanús, pero el sitio se publica donde el proyecto lo necesite."
+      },
+      "after": {
+        "q": "¿Qué pasa después de publicar?",
+        "a": "Incluye una sesión de capacitación y treinta días de ajustes. Después podés mantenerlo vos o dejarnos un plan mensual de soporte y mejoras."
+      }
     }
   },
   "Contact": {
-    "eyebrow": "Inicia la transformacion",
-    "title": "Hablemos de tu proyecto",
-    "description": "Cuéntanos qué quieres construir y te responderemos con una primera mirada estrategica.",
-    "quoteNote": "La consulta y el presupuesto inicial son sin cargo y sin compromiso.",
-    "whatsappLabel": "Escribinos por WhatsApp",
-    "emailLabel": "Enviar un email",
-    "name": "Tu nombre o el de tu empresa",
-    "email": "Mail de contacto",
-    "phone": "Numero de telefono (opcional)",
-    "message": "Describe tu proyecto o mensaje",
-    "privacy": "Acepto que Paleoware utilice estos datos para responder a mi consulta.",
-    "submit": "Enviar consulta",
-    "sending": "Enviando señal...",
-    "success": "Consulta recibida. Pronto nos pondremos en contacto.",
-    "fallback": "El formulario estara disponible cuando configuremos EmailJS.",
-    "error": "No pudimos enviar el mensaje. Intentalo nuevamente o escribenos por WhatsApp.",
-    "required": "Campo obligatorio"
-  },
-  "About": {
-    "eyebrow": "Sobre Paleoware",
-    "title": "Construimos presencia digital con identidad propia.",
-    "description": "Paleoware es un estudio de desarrollo web para empresas, emprendedores y creadores que buscan algo mas que una plantilla.",
-    "back": "Volver al inicio"
+    "title": "Hablemos de tu proyecto.",
+    "lead": "Contanos qué necesitás. Respondemos en un día hábil con una primera mirada, sin cargo y sin compromiso.",
+    "routes": {
+      "whatsapp": "WhatsApp",
+      "email": "Correo"
+    },
+    "form": {
+      "name": "Tu nombre",
+      "email": "Mail de contacto",
+      "message": "Qué necesitás",
+      "messagePlaceholder": "Contanos qué tenés en mente, para cuándo y qué referencia te gusta.",
+      "privacy": "Acepto que Paleoware use estos datos para responder mi consulta.",
+      "submit": "Enviar consulta",
+      "submitted": "Consulta recibida",
+      "sending": "Enviando…",
+      "success": "Consulta recibida. Te escribimos en un día hábil.",
+      "error": "No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.",
+      "unconfigured": "El formulario todavía no está conectado. Escribinos por WhatsApp o por correo."
+    }
   },
   "Footer": {
-    "statement": "Diseño y desarrollo web para marcas que quieren dejar huella.",
+    "statement": "Sitios a medida para proyectos que no quieren extinguirse.",
+    "sitemap": "Sitio",
+    "contact": "Contacto",
     "rights": "Todos los derechos reservados.",
-    "backToTop": "Volver al inicio",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
-    "whatsapp": "Escribir por WhatsApp"
+    "top": "Volver arriba"
+  },
+  "ServicesPage": {
+    "title": "Seis servicios. Tres capas.",
+    "lead": "Todo lo que podemos hacer, con lo que incluye cada pieza y para quién es.",
+    "back": "Volver al inicio",
+    "includes": "Incluye",
+    "forWhom": "Para quién",
+    "cta": "Hablemos de tu proyecto",
+    "items": {
+      "strategy": {
+        "includes": [
+          "Investigación y referencias",
+          "Mensaje y jerarquía",
+          "Mapa del sitio"
+        ],
+        "forWhom": "Proyectos que todavía no saben qué decir ni a quién."
+      },
+      "webDesign": {
+        "includes": [
+          "Sistema visual aplicado",
+          "Prototipo navegable",
+          "Diseño de estados"
+        ],
+        "forWhom": "Marcas con identidad pero sin interfaz."
+      },
+      "webCreation": {
+        "includes": [
+          "Desarrollo a medida",
+          "Contenido cargado",
+          "Publicación y dominio"
+        ],
+        "forWhom": "Quien necesita existir bien, rápido."
+      },
+      "ecommerce": {
+        "includes": [
+          "Catálogo y fichas de producto",
+          "Checkout conectado",
+          "Medición de compra"
+        ],
+        "forWhom": "Quien vende productos y pierde consultas."
+      },
+      "seoAnalytics": {
+        "includes": [
+          "SEO técnico",
+          "Analítica configurada",
+          "Panel de lectura"
+        ],
+        "forWhom": "Quien ya tiene sitio y no lo ve crecer."
+      },
+      "marketing": {
+        "includes": [
+          "Calendario de contenido",
+          "Piezas para redes",
+          "Campañas pagas"
+        ],
+        "forWhom": "Quien publica sin rumbo y quiere constancia."
+      }
+    }
   },
   "NotFound": {
-    "eyebrow": "Estudio digital / Estrategia / Desarrollo",
     "title": "404",
     "subtitle": "Página no encontrada",
-    "heading": "Parece que te has adentrado demasiado.",
-    "description": "La página que buscas no existe o ha sido movida.",
-    "cta": "Volver al inicio"
+    "heading": "Te adentraste demasiado.",
+    "description": "La página que buscás no existe o cambió de estrato.",
+    "cta": "Volver a la superficie",
+    "signalLabel": "Señal perdida / Reconectar"
   }
 }

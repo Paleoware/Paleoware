@@ -1,29 +1,52 @@
-import { getTranslations } from 'next-intl/server'
-import { services } from '@/config/site'
-import { ServiceCard } from '@/components/service-card'
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { serviceFamilies } from '@/config/services'
+import { Reveal } from './reveal'
+import { SectionHead } from './section-head'
 
-export async function ServicesSection() {
-  const t = await getTranslations('Services')
-  const enabledServices = services.filter((service) => service.enabled)
+type ServicesSectionProps = Readonly<{ locale: string }>
+
+export function ServicesSection({ locale }: ServicesSectionProps) {
+  const t = useTranslations('Services')
 
   return (
-    <section className="services-section section-shell" id="services">
-      <div className="section-heading">
-        <div>
-          <p className="section-kicker">{t('eyebrow')}</p>
-          <h2>{t('title')}</h2>
+    <section className="section" id="servicios" data-stratum="01">
+      <div className="shell">
+        <SectionHead title={t('title')} lead={t('lead')} />
+
+        <div className="bands">
+          {serviceFamilies.map((family, index) => (
+            <Reveal key={family.id} className="band" delay={index * 70}>
+              <div className="band__family">
+                <span className="band__bar" aria-hidden="true" />
+                <h3 className="band__name">{t(`families.${family.id}.name`)}</h3>
+              </div>
+
+              <ul className="band__list">
+                {family.services.map((id) => (
+                  <li key={id}>
+                    <Link className="svc" href={`/${locale}/servicios/#${id}`}>
+                      <span className="svc__body">
+                        <span className="svc__name">{t(`items.${id}.name`)}</span>
+                        <span className="svc__promise">{t(`items.${id}.promise`)}</span>
+                      </span>
+                      <span className="svc__arrow" aria-hidden="true">
+                        →
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
         </div>
-        <p>{t('description')}</p>
-      </div>
-      <div className="services-grid">
-        {enabledServices.map((service) => (
-          <ServiceCard
-            description={t(`items.${service.id}.description`)}
-            icon={service.icon}
-            key={service.id}
-            title={t(`items.${service.id}.title`)}
-          />
-        ))}
+
+        <div className="bands__foot">
+          <Link className="link-arrow" href={`/${locale}/servicios/`}>
+            {t('cta')}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </div>
     </section>
   )
