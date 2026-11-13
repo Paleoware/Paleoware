@@ -4,7 +4,7 @@
 
 Paleoware is a bilingual marketing landing page for a web development studio. The visual direction combines paleontology, retrofuturism and biomechanical interfaces. The visual language uses volcanic black, amber light, fossil tones, technical labels, glass surfaces, holographic effects and controlled motion.
 
-The first release is a static website. It does not have a database, authentication, custom API or server-side form handler.
+The first release is a static website with a small Cloudflare Worker for the contact form. It does not have a database or authentication.
 
 ## Stack
 
@@ -13,15 +13,14 @@ The first release is a static website. It does not have a database, authenticati
 - `next-intl` for Spanish and English translations.
 - GSAP, `ScrollTrigger` and `@gsap/react` for motion.
 - Google Fonts loaded in `src/app/layout.tsx` with `<link>`.
-- `@emailjs/browser` for the client-side contact form.
+- Cloudflare Workers, Turnstile and Resend for the contact form backend.
 - `@next/third-parties/google` for optional Google Analytics.
-- GitHub Pages as the initial host.
-- GitHub Actions for static builds and deployment.
+- Cloudflare for the frontend hosting and Worker deployment.
 
 ## Important Constraints
 
-- Keep `output: 'export'` in `next.config.ts` while GitHub Pages is the host.
-- Do not add Server Actions, dynamic API routes, database code or server-only form handling without discussing the hosting change first.
+- Keep the frontend static with `output: 'export'`; the contact backend lives in `worker/` and is deployed separately to Cloudflare Workers.
+- Do not add Server Actions or dynamic API routes to the Next.js app. Backend form handling belongs in the Cloudflare Worker.
 - All visible user-facing text must exist in both `src/messages/es.json` and `src/messages/en.json`.
 - Do not put translated copy directly in JSX when it belongs to the interface.
 - Use Server Components by default. Add `'use client'` only for browser APIs, state, event handlers or animations.
@@ -66,10 +65,10 @@ Use stable IDs in configuration and keep their translated labels in the message 
 
 ## Forms And Analytics
 
-- `src/components/contact-form.tsx` uses `@emailjs/browser` and currently shows a temporary configuration message when EmailJS variables are missing.
-- Required browser variables are documented in `.env.example`.
-- Never commit private credentials. EmailJS public identifiers and the GA measurement ID are build-time browser values.
-- The form includes a honeypot and a privacy checkbox.
+- `src/components/contact-form.tsx` sends JSON to the Cloudflare Worker and includes the Turnstile token, honeypot and privacy checkbox.
+- Required browser variables are documented in `.env.example`; Worker secrets belong in `worker/.dev.vars` locally or Cloudflare secrets in production.
+- Never commit private credentials. Resend and Turnstile secret keys must never reach the browser.
+- The form includes Turnstile, a honeypot and a privacy checkbox.
 - Analytics only renders when `NEXT_PUBLIC_GA_ID` exists. Review consent requirements before the global public launch.
 
 ### Analytics Events
@@ -94,14 +93,13 @@ GA4 automatically tracks: engagement rate, traffic sources, user location (count
 
 `src/components/contact-option-link.tsx` is a Client Component wrapper for contact links that sends tracking events on click.
 
-## GitHub Pages
+## Cloudflare deployment
 
-- The repository should be `paleoware.github.io` for a user site.
-- `.github/workflows/deploy.yml` runs on pushes to `main` and can also be started manually.
-- The workflow installs dependencies with `npm ci`, runs `npm run build`, uploads `out` and deploys it to GitHub Pages.
-- Configure the repository Pages source as GitHub Actions.
-- Configure public build variables under the repository Actions variables when EmailJS or Analytics is ready.
-- A future custom domain is represented by `siteConfig.url` and must also be configured in GitHub Pages settings.
+- The frontend remains a static export and can be hosted on Cloudflare Pages or served by a Cloudflare Worker.
+- `worker/wrangler.jsonc` configures the contact Worker and `worker/.dev.vars` stores local secrets.
+- `npm run worker:dev` starts the local contact backend on port 8787.
+- `npm run worker:deploy` deploys the contact backend with Wrangler.
+- Set `NEXT_PUBLIC_CONTACT_API_URL` in the frontend to the public Worker URL.
 
 ## Files To Edit Carefully
 

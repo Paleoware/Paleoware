@@ -191,7 +191,8 @@
       "sending": "Sending…",
       "success": "Enquiry received. We will reply within one business day.",
       "error": "We could not send the message. Try again or reach us on WhatsApp.",
-      "unconfigured": "The form is not connected yet. Reach us on WhatsApp or by email."
+      "unconfigured": "The form is not connected yet. Reach us on WhatsApp or by email.",
+      "verification": "Complete the security check before sending."
     }
   },
   "Footer": {

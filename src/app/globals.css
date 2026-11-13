@@ -1436,6 +1436,10 @@ body[data-menu-open="true"] .site-footer {
   flex: none;
 }
 
+.contact-form__turnstile {
+  min-height: 65px;
+}
+
 .form-actions {
   display: flex;
   flex-wrap: wrap;

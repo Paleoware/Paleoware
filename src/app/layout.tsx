@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Analytics } from '@/components/analytics'
 import './globals.css'
 
@@ -61,6 +62,10 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )

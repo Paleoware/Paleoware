@@ -8,7 +8,7 @@ Landing page multilenguaje para Paleoware, construida como una exportacion estat
 - `next-intl` para las rutas `/es` y `/en`.
 - CSS global con variables visuales, responsive y keyframes en `src/app/globals.css` durante esta primera fase.
 - GSAP y `@gsap/react` para animaciones y ScrollTrigger.
-- EmailJS Browser para el formulario sin backend.
+- Cloudflare Worker con Turnstile y Resend para el formulario de contacto.
 - Google Analytics opcional mediante `@next/third-parties/google`.
 
 ## Desarrollo local
@@ -24,7 +24,7 @@ La raiz `/` detecta el idioma del navegador y redirige a `/es/` o `/en/`. Tambie
 
 ## Configuracion
 
-Define estas variables en `.env.local` y completa los identificadores cuando existan las cuentas de EmailJS y Google Analytics. Son identificadores publicos para el navegador, no contraseñas.
+Define las variables públicas del formulario en `.env.local` usando `.env.example` como referencia. La clave privada de Resend y la clave secreta de Turnstile deben vivir únicamente en `worker/.dev.vars` o en los secretos de Cloudflare.
 
 Las activaciones de contenido se encuentran en `src/config/site.ts`:
 
@@ -45,6 +45,6 @@ Para una pagina de usuario, el repositorio debera llamarse `paleoware.github.io`
 - `src/messages/es.json` y `src/messages/en.json`: textos de cada idioma.
 - `src/components/hero.tsx`: texto rotativo, parallax y animaciones GSAP.
 - `src/components/custom-cursor.tsx`: cursores personalizados y rastro de arena.
-- `src/components/contact-form.tsx`: validacion, honeypot y envio EmailJS.
+- `src/components/contact-form.tsx`: validación, honeypot, Turnstile y envío al Worker.
 
 Cada bloque se explicara durante las siguientes iteraciones sin ocultar la relacion entre JSX, CSS y TypeScript.

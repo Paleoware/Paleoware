@@ -1,0 +1,12 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "paleoware-contact",
+  "main": "./src/index.ts",
+  "compatibility_date": "2026-11-12",
+  "vars": {
+    "CONTACT_TO_EMAIL": "perranube312@gmail.com",
+    "CONTACT_FROM_EMAIL": "Paleoware <onboarding@resend.dev>",
+    "ALLOWED_ORIGINS": "http://localhost:3000,http://127.0.0.1:3000,https://paleoware.pages.dev,https://paleoware.com,https://www.paleoware.com",
+    "TURNSTILE_EXPECTED_ACTION": "contact"
+  }
+}

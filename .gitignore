@@ -4,4 +4,8 @@ out/
 .env*
 !.env.example
 .env.local
+.dev.vars
+worker/.dev.vars
+.wrangler/
+worker/.wrangler/
 *.log

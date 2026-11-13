@@ -191,7 +191,8 @@
       "sending": "Enviando…",
       "success": "Consulta recibida. Te escribimos en un día hábil.",
       "error": "No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.",
-      "unconfigured": "El formulario todavía no está conectado. Escribinos por WhatsApp o por correo."
+      "unconfigured": "El formulario todavía no está conectado. Escribinos por WhatsApp o por correo.",
+      "verification": "Completá la verificación de seguridad antes de enviar."
     }
   },
   "Footer": {

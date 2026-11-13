@@ -9,6 +9,8 @@ export default defineConfig([
     '.next/**',
     'out/**',
     'node_modules/**',
+    '.wrangler/**',
+    'worker/.wrangler/**',
     '.agents/**',
     'next-env.d.ts',
   ]),
