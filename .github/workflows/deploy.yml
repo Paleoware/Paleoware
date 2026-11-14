@@ -30,10 +30,22 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /Paleoware
-          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
-          NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ vars.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
-          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ vars.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
+          NEXT_PUBLIC_CONTACT_API_URL: ${{ vars.NEXT_PUBLIC_CONTACT_API_URL || 'https://paleoware-contact.paleoware.workers.dev/api/contact' }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAF-lMOQ_GQRfCH3H' }}
           NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+      - name: Validate public contact configuration
+        run: |
+          if [ -z "$NEXT_PUBLIC_CONTACT_API_URL" ]; then
+            echo "Missing GitHub Actions variable: NEXT_PUBLIC_CONTACT_API_URL"
+            exit 1
+          fi
+          if [ -z "$NEXT_PUBLIC_TURNSTILE_SITE_KEY" ]; then
+            echo "Missing GitHub Actions variable: NEXT_PUBLIC_TURNSTILE_SITE_KEY"
+            exit 1
+          fi
+        env:
+          NEXT_PUBLIC_CONTACT_API_URL: ${{ vars.NEXT_PUBLIC_CONTACT_API_URL || 'https://paleoware-contact.paleoware.workers.dev/api/contact' }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAF-lMOQ_GQRfCH3H' }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
