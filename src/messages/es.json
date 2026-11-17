@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Paleoware — Sitios a medida que no se confunden con el resto",
-    "description": "Estudio de diseño y desarrollo web en Lanús. Sitios a medida para proyectos que necesitan una presencia que no se parezca a todas las demás."
+    "title": "Paleoware — Diseño web con identidad para negocios y proyectos",
+    "description": "Diseño web con identidad para negocios y proyectos de toda Argentina, con disponibilidad para mercados hispanohablantes e internacionales."
   },
   "LanguageGateway": {
     "loading": "Preparando la señal…",
@@ -23,7 +23,7 @@
     "skip": "Saltar al contenido"
   },
   "Hero": {
-    "titlePrefix": "Paleoware construye webs que",
+    "titlePrefix": "Diseño web con identidad para negocios y proyectos",
     "phrases": [
       "convierten visitas en ventas",
       "aumentan tu visibilidad",
@@ -31,7 +31,7 @@
       "crecen con tu negocio",
       "se ven tan bien como funcionan"
     ],
-    "lead": "Diseño y desarrollo a medida para proyectos que necesitan una presencia que no se confunda con el resto.",
+    "lead": "Diseño web, desarrollo, estrategia y contenido para negocios y proyectos de toda Argentina y otros mercados.",
     "cta": "Hablemos de tu proyecto"
   },
   "Services": {
@@ -165,7 +165,7 @@
       },
       "remote": {
         "q": "¿Trabajan con proyectos de otras ciudades?",
-        "a": "Sí. Todo el proceso se hace por videollamada y enlaces compartidos. La base está en Lanús, pero el sitio se publica donde el proyecto lo necesite."
+        "a": "Sí. Todo el proceso se hace por videollamada y enlaces compartidos. Trabajamos con proyectos de toda Argentina y también con clientes de otros mercados."
       },
       "after": {
         "q": "¿Qué pasa después de publicar?",
@@ -203,8 +203,8 @@
     "top": "Volver arriba"
   },
   "ServicesPage": {
-    "title": "Seis servicios. Tres capas.",
-    "lead": "Todo lo que podemos hacer, con lo que incluye cada pieza y para quién es.",
+    "title": "Servicios de diseño y desarrollo web",
+    "lead": "Estrategia, diseño web, desarrollo, e-commerce, SEO y contenido para negocios y proyectos de toda Argentina y mercados internacionales.",
     "back": "Volver al inicio",
     "includes": "Incluye",
     "forWhom": "Para quién",

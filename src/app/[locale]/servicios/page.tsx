@@ -34,6 +34,19 @@ export async function generateMetadata({
         en: '/en/servicios',
       },
     },
+    openGraph: {
+      type: 'website',
+      siteName: 'Paleoware',
+      locale: locale === 'es' ? 'es_AR' : 'en_US',
+      title: t('title'),
+      description: t('lead'),
+      url: `/${locale}/servicios`,
+    },
+    twitter: {
+      card: 'summary',
+      title: t('title'),
+      description: t('lead'),
+    },
   }
 }
 

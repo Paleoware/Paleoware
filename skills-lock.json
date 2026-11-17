@@ -1,29 +1,79 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "ai-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/ai-seo/SKILL.md",
+      "computedHash": "5b5dbb143389784211c56e357e20bd44a12c3a0245dbf6dcfbb40348daaaf4ef"
+    },
+    "analytics": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/analytics/SKILL.md",
+      "computedHash": "064ca10386885a91dc0a7251fe6993606df4e37344d620370d8744a26c970938"
+    },
+    "competitor-profiling": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/competitor-profiling/SKILL.md",
+      "computedHash": "fc97f06498a18f63a2a0ec5dbc7fe8ecad7a384f12710298fe5cec5c06678073"
+    },
     "design-taste-frontend": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",
       "skillPath": "skills/taste-skill/SKILL.md",
-      "computedHash": "53590ee9325bee34d7888bf0d81bd3941a108b1e7850df46802d93104e3f2b90"
+      "computedHash": "0094b3a70572d65b2c534ff811a780ae044621aac7a791ec6f70874c0a02f3d8"
     },
     "designing-frontend-interfaces": {
       "source": "osmontero/opencode-skills",
       "sourceType": "github",
       "skillPath": "skills/designing-frontend-interfaces/SKILL.md",
-      "computedHash": "ce02f3782c73a63a2dcf194603cc3c855c110f2b31295f327202b3859679d72b"
+      "computedHash": "5c73bcb8ae001a256da34a121767da3bd40b9b4eaa6ee575d2115b799a86d4f6"
     },
     "frontend-design": {
       "source": "daskoon/impeccable",
       "sourceType": "github",
       "skillPath": ".claude/skills/frontend-design/SKILL.md",
-      "computedHash": "d3f5281a0299aa4808bbfd4afbfac0e28ff38fb0006c5cde9c4630f372573921"
+      "computedHash": "3f2b5fa899574e6253647a2b71798c5c6c7254aa80913ec30d5515fa90a38f38"
+    },
+    "keyword-clustering": {
+      "source": "every-app/open-seo",
+      "ref": "main",
+      "commit": "2df84ff91461cc55b6c8bb98f3ce0f195d2e463d",
+      "sourceType": "github",
+      "skillPath": "plugins/openseo/skills/keyword-clustering/SKILL.md",
+      "computedHash": "ea488d9230b5dbac0c9e1f385cd5ab1118b484abf84f34bc9a2e0449b11a9576"
+    },
+    "link-building": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/link-building/SKILL.md",
+      "computedHash": "572e0dd1fe52de0ae3c713b439ab641c602c3cc16bccf009bca687a347eff715"
+    },
+    "schema": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/schema/SKILL.md",
+      "computedHash": "f8704ea70fc7d7ff985b9d902e52bac2d455baa6678b803b4306c8afb99997b1"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "37ac5512c83e37dea45ba4a1d8075623812df56db712b2461509d79b5599881e"
     },
     "ui-ux-pro-max": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",
       "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
-      "computedHash": "36aaacc42e9151aa3c66403a9b97d668782635b02bb013fa2122436b7fc3e71b"
+      "computedHash": "81363fee234bc93eb5e3103c921106d47afbe1dced05e8e00585b8e5290cc853"
     }
   }
 }

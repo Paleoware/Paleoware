@@ -26,7 +26,7 @@ const CLIPS = {
 type MediaState = {
   mode: 'dark' | 'light'
   visible: 0 | 1
-  /** Scene index held by each video slot. The hidden slot always preloads the next one. */
+  /** Scene index held by each video slot. */
   slots: [number, number]
 }
 
@@ -47,6 +47,7 @@ export function Hero() {
     visible: 0,
     slots: [0, 1],
   })
+  const [loadedSlots, setLoadedSlots] = useState<0 | 1>(0)
 
   const mode = state.mode
   const clips = useMemo(() => CLIPS[mode], [mode])
@@ -313,6 +314,7 @@ export function Hero() {
       setStaticOn(true)
       timers.current.push(
         window.setTimeout(() => {
+          setLoadedSlots(1)
           setState((current) => {
             const nextVisible: 0 | 1 = current.visible === 0 ? 1 : 0
             const leaving = current.visible
@@ -352,7 +354,7 @@ export function Hero() {
   }, [state, mode, still])
 
   const visiblePhrase = still ? firstPhrase : typed
-  const renderedSlots = still ? [0] : [0, 1]
+  const renderedSlots = still ? [0] : loadedSlots === 1 ? [0, 1] : [0]
 
   return (
     <section className="hero" id="superficie">
@@ -370,7 +372,7 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
             aria-hidden="true"
             tabIndex={-1}
           />

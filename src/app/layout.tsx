@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     template: '%s | Paleoware',
   },
   description:
-    'Estudio de diseño y desarrollo web en Lanús. Sitios a medida para proyectos que necesitan una presencia que no se parezca a todas las demás.',
+    'Diseño web con identidad para negocios y proyectos en toda Argentina y para mercados hispanohablantes e internacionales.',
   openGraph: {
     title: 'Paleoware — Sitios a medida que no se confunden con el resto',
     description:
-      'Diseño y desarrollo web con identidad, estrategia y tecnología.',
+      'Diseño web con identidad, estrategia y tecnología para Argentina y mercados internacionales.',
     type: 'website',
     siteName: 'Paleoware',
   },

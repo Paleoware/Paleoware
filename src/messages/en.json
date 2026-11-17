@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Paleoware — Custom websites that do not blend in",
-    "description": "Web design and development studio based in Lanús. Custom sites for projects that need a presence unlike everything else."
+    "title": "Paleoware — Web design with identity for businesses and projects",
+    "description": "Web design with identity for businesses and projects across Argentina, with availability for Spanish-speaking and international markets."
   },
   "LanguageGateway": {
     "loading": "Tuning the signal…",
@@ -23,7 +23,7 @@
     "skip": "Skip to content"
   },
   "Hero": {
-    "titlePrefix": "Paleoware builds websites that",
+    "titlePrefix": "Web design with identity for businesses and projects",
     "phrases": [
       "turn visits into sales",
       "make you easier to find",
@@ -31,7 +31,7 @@
       "grow with your business",
       "look as good as they work"
     ],
-    "lead": "Custom design and development for projects that need a presence unlike everything else.",
+    "lead": "Web design, development, strategy and content for businesses and projects across Argentina and other markets.",
     "cta": "Let's talk about your project"
   },
   "Services": {
@@ -165,7 +165,7 @@
       },
       "remote": {
         "q": "Do you work with projects in other cities?",
-        "a": "Yes. The whole process runs over video calls and shared links. We are based in Lanús, but the site goes live wherever the project needs it."
+        "a": "Yes. The whole process runs over video calls and shared links. We work with projects across Argentina and with clients in other markets."
       },
       "after": {
         "q": "What happens after launch?",
@@ -203,8 +203,8 @@
     "top": "Back to top"
   },
   "ServicesPage": {
-    "title": "Six services. Three layers.",
-    "lead": "Everything we can do, with what each piece includes and who it is for.",
+    "title": "Web design and development services",
+    "lead": "Strategy, web design, development, e-commerce, SEO and content for businesses and projects across Argentina and international markets.",
     "back": "Back to home",
     "includes": "Includes",
     "forWhom": "For whom",
