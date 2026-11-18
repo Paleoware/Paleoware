@@ -66,10 +66,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <nav className="breadcrumbs" aria-label={t('home')}>
               <ol>
                 <li><Link href={`/${locale}/`}>{t('home')}</Link></li>
-                <li aria-current="page">{nav('about')}</li>
               </ol>
             </nav>
-            <p className="label">{t('eyebrow')}</p>
             <h1>{t('title')}</h1>
             <p className="about-page__intro">{t('intro')}</p>
           </div>

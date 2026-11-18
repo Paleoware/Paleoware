@@ -52,7 +52,6 @@ export default async function CookiesPage({ params }: CookiesPageProps) {
             <nav className="breadcrumbs" aria-label={t('pageTitle')}>
               <ol>
                 <li><Link href={`/${locale}/`}>{nav('home')}</Link></li>
-                <li aria-current="page">{nav('cookies')}</li>
               </ol>
             </nav>
             <h1>{t('pageTitle')}</h1>

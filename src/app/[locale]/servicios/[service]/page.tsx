@@ -104,14 +104,11 @@ export default async function ServiceDetailPage({ params }: Props) {
             <nav className="breadcrumbs" aria-label={t('home')}>
               <ol>
                 <li><Link href={`/${locale}/`}>{t('home')}</Link></li>
-                <li><Link href={`/${locale}/servicios/`}>{nav('services')}</Link></li>
-                <li aria-current="page">{title}</li>
               </ol>
             </nav>
             <Link className="link-arrow" href={`/${locale}/servicios/`}>
               <span aria-hidden="true">←</span> {t('back')}
             </Link>
-            <p className="label">{t(`items.${service}.eyebrow`)}</p>
             <h1>{t(`items.${service}.title`)}</h1>
             <p className="service-detail__intro">{t(`items.${service}.intro`)}</p>
           </div>

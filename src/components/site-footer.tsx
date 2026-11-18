@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import logo from '@/Paleoware-new-logo.webp'
+import facebookIcon from '@/fb.webp'
+import instagramIcon from '@/ig.webp'
+import whatsappIcon from '@/wpp.webp'
 import { siteConfig } from '@/config/site'
 import { ColorBar } from './color-bar'
 import { TrackedLink } from './tracked-link'
@@ -29,7 +32,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           </div>
 
           <div className="footer__col">
-            <h3>{t('sitemap')}</h3>
+            <h3>{t('menu')}</h3>
             <ul>
               <li>
                 <Link href={`/${locale}/about/`}>{nav('about')}</Link>
@@ -49,30 +52,16 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             </ul>
           </div>
 
-          <div className="footer__col">
-            <h3>{t('contact')}</h3>
-            <ul>
-              <li>
-                <TrackedLink href={whatsappUrl} target="_blank" rel="noreferrer" event="contact_click" params={{ channel: 'whatsapp', location: 'footer' }}>
-                  WhatsApp
-                </TrackedLink>
-              </li>
-              <li>
-                <TrackedLink href={`mailto:${siteConfig.contact.email}`} event="contact_click" params={{ channel: 'email', location: 'footer' }}>
-                  {siteConfig.contact.email}
-                </TrackedLink>
-              </li>
-              <li>
-                <TrackedLink href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer" event="social_click" params={{ network: 'instagram' }}>
-                  Instagram
-                </TrackedLink>
-              </li>
-              <li>
-                <TrackedLink href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer" event="social_click" params={{ network: 'facebook' }}>
-                  Facebook
-                </TrackedLink>
-              </li>
-            </ul>
+          <div className="footer__col footer__socials">
+            <h3>{t('follow')}</h3>
+            <div className="footer__social-links">
+              <TrackedLink className="footer__social-link" href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer" aria-label={t('facebook')} event="social_click" params={{ network: 'facebook' }}>
+                <Image src={facebookIcon} alt="" width={150} height={150} />
+              </TrackedLink>
+              <TrackedLink className="footer__social-link" href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer" aria-label={t('instagram')} event="social_click" params={{ network: 'instagram' }}>
+                <Image src={instagramIcon} alt="" width={150} height={150} />
+              </TrackedLink>
+            </div>
           </div>
         </div>
 
@@ -88,6 +77,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           </span>
         </div>
       </div>
+      <TrackedLink className="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={t('whatsapp')} event="whatsapp_click" params={{ location: 'floating' }}>
+        <Image src={whatsappIcon} alt="" width={150} height={150} />
+      </TrackedLink>
     </footer>
   )
 }

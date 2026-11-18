@@ -96,7 +96,6 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
             <nav className="breadcrumbs" aria-label={t('home')}>
               <ol>
                 <li><Link href={`/${locale}/`}>{t('home')}</Link></li>
-                <li aria-current="page">{nav('services')}</li>
               </ol>
             </nav>
             <h1>{t('title')}</h1>

@@ -235,7 +235,7 @@
     "sections": [
       { "title": "What are cookies?", "body": "Cookies are small files that a website may store in a browser. Similar technologies, such as localStorage and sessionStorage, may also be used to remember preferences and maintain basic functions." },
       { "title": "Necessary technologies", "body": "Paleoware uses technical storage to remember light and dark mode, maintain certain navigation preferences, store the cookie decision and protect the contact form from spam through Cloudflare Turnstile. These technologies are not used to build advertising profiles." },
-      { "title": "Google Analytics", "body": "If you accept it, Google Analytics helps us understand visits, pages viewed, language, general traffic source and interactions with buttons and forms. It may use cookies such as _ga and _ga_<identifier>. Analytics remains disabled until consent is given." },
+      { "title": "Google Analytics", "body": "If you accept it, Google Analytics helps us understand how many people visit the site, which pages they view, which language they use and how they interact with buttons and forms. It does this through small files called cookies. Analytics remains disabled until you give your consent." },
       { "title": "Cloudflare Turnstile", "body": "The contact form uses Cloudflare Turnstile to verify that submissions come from people and reduce spam. It may make technical requests to Cloudflare and use storage mechanisms provided by the service. It is necessary to submit the form." },
       { "title": "Fonts and external services", "body": "The site's fonts are hosted locally. Links to WhatsApp, Instagram and Facebook lead to third-party sites, which apply their own policies once you leave Paleoware." },
       { "title": "Consent management", "body": "You can accept, reject or configure optional technologies. Your decision is kept for six months and can be changed from the Cookie preferences link in the footer." },
@@ -245,8 +245,12 @@
   },
   "Footer": {
     "statement": "Custom sites for projects that refuse to go extinct.",
-    "sitemap": "Site",
-    "contact": "Contact",
+    "sitemap": "Menu",
+    "menu": "Menu",
+    "follow": "Follow us on social media",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "whatsapp": "Open WhatsApp",
     "rights": "All rights reserved.",
     "top": "Back to top"
   },

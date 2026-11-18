@@ -235,7 +235,7 @@
     "sections": [
       { "title": "¿Qué son las cookies?", "body": "Las cookies son pequeños archivos que un sitio puede almacenar en el navegador. También pueden utilizarse tecnologías similares, como localStorage y sessionStorage, para recordar preferencias y mantener funciones básicas." },
       { "title": "Tecnologías necesarias", "body": "Paleoware utiliza almacenamiento técnico para recordar el modo claro u oscuro, mantener algunas preferencias de navegación, guardar la decisión sobre cookies y proteger el formulario contra spam mediante Cloudflare Turnstile. Estas tecnologías no se utilizan para crear perfiles publicitarios." },
-      { "title": "Google Analytics", "body": "Si lo aceptás, Google Analytics permite conocer visitas, páginas consultadas, idioma, origen general e interacciones con botones y formularios. Puede utilizar cookies como _ga y _ga_<identificador>. La analítica permanece desactivada hasta recibir consentimiento." },
+      { "title": "Google Analytics", "body": "Si lo aceptás, Google Analytics nos ayuda a saber cuántas personas visitan el sitio, qué páginas consultan, qué idioma utilizan y cómo interactúan con botones y formularios. Para hacerlo, utiliza pequeños archivos llamados cookies. La analítica permanece desactivada hasta que otorgues tu consentimiento." },
       { "title": "Cloudflare Turnstile", "body": "El formulario utiliza Cloudflare Turnstile para verificar que los envíos provienen de personas y reducir el spam. Puede realizar solicitudes técnicas a Cloudflare y utilizar mecanismos de almacenamiento propios del proveedor. Su funcionamiento es necesario para enviar el formulario." },
       { "title": "Fuentes y servicios externos", "body": "Las fuentes del sitio se alojan localmente. Los enlaces a WhatsApp, Instagram y Facebook llevan a sitios de terceros, que aplican sus propias políticas cuando abandonás Paleoware." },
       { "title": "Gestión del consentimiento", "body": "Podés aceptar, rechazar o configurar las tecnologías opcionales. La decisión se conserva durante seis meses y puede modificarse desde el enlace Preferencias de cookies del pie de página." },
@@ -245,8 +245,12 @@
   },
   "Footer": {
     "statement": "Sitios a medida para proyectos que no quieren extinguirse.",
-    "sitemap": "Sitio",
-    "contact": "Contacto",
+    "sitemap": "Menú",
+    "menu": "Menú",
+    "follow": "Seguinos en nuestras redes",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "whatsapp": "Abrir WhatsApp",
     "rights": "Todos los derechos reservados.",
     "top": "Volver arriba"
   },
