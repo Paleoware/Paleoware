@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/site'
-import socialImage from '@/ISOTIPO.webp'
+import socialImage from '@/Paleoware-Logotipo.webp'
 
 const SITE_URL = siteConfig.url
 const ORGANIZATION_ID = `${SITE_URL}/#organization`

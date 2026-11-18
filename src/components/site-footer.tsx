@@ -5,6 +5,7 @@ import logo from '@/Paleoware-new-logo.webp'
 import { siteConfig } from '@/config/site'
 import { ColorBar } from './color-bar'
 import { TrackedLink } from './tracked-link'
+import { CookieSettingsButton } from './cookie-banner'
 
 type SiteFooterProps = Readonly<{ locale: string }>
 
@@ -42,6 +43,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
               <li>
                 <Link href={`${home}#contacto`}>{nav('contact')}</Link>
               </li>
+              <li>
+                <Link href={`/${locale}/cookies/`}>{nav('cookies')}</Link>
+              </li>
             </ul>
           </div>
 
@@ -78,7 +82,10 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
         <div className="footer__bottom">
           <span>© 2026 Paleoware. {t('rights')}</span>
-          <a href="#superficie">{t('top')} ↑</a>
+          <span className="footer__bottom-actions">
+            <CookieSettingsButton label={nav('cookieSettings')} />
+            <a href="#superficie">{t('top')} ↑</a>
+          </span>
         </div>
       </div>
     </footer>

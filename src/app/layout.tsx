@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import socialImage from '@/ISOTIPO.webp'
+import socialImage from '@/Paleoware-Logotipo.webp'
 import { Analytics } from '@/components/analytics'
 import './globals.css'
 
@@ -62,14 +62,6 @@ export default function RootLayout({
   return (
     <html lang="es" data-theme="dark" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* The project intentionally loads Google Fonts with link tags. */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Sans:wght@400;500;600&family=Tektur:wght@500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script dangerouslySetInnerHTML={{ __html: bootstrapScript }} />
       </head>
       <body>

@@ -11,7 +11,9 @@
   },
   "Navigation": {
     "services": "Services",
-    "about": "Paleoware",
+    "about": "About Paleoware",
+    "cookies": "Cookie policy",
+    "cookieSettings": "Cookie preferences",
     "faq": "Questions",
     "contact": "Contact",
     "quote": "Let's talk",
@@ -212,6 +214,35 @@
       "verification": "Complete the security check before sending."
     }
   },
+  "Cookies": {
+    "title": "Your privacy matters too",
+    "description": "We use technical storage to keep Paleoware working properly and, if you agree, analytics to understand how the site is used and improve the experience.",
+    "policyPath": "/en/cookies/",
+    "policyLink": "Read the cookie policy",
+    "accept": "Accept all",
+    "reject": "Reject optional",
+    "configure": "Configure preferences",
+    "save": "Save preferences",
+    "alwaysOn": "Always active",
+    "necessaryTitle": "Necessary technologies",
+    "necessaryDescription": "Remember basic preferences, protect the form and store your consent decision.",
+    "analyticsTitle": "Analytics",
+    "analyticsDescription": "Helps measure visits, events, contact buttons and forms through Google Analytics.",
+    "pageTitle": "Paleoware cookie policy",
+    "updated": "Last updated: 18 November 2026",
+    "intro": "This policy explains how Paleoware uses cookies and similar technologies on paleoware.com.",
+    "responsible": "Responsible party: Marcos Andres Ortega. Contact: info@paleoware.com · +54 11 3411-7299.",
+    "sections": [
+      { "title": "What are cookies?", "body": "Cookies are small files that a website may store in a browser. Similar technologies, such as localStorage and sessionStorage, may also be used to remember preferences and maintain basic functions." },
+      { "title": "Necessary technologies", "body": "Paleoware uses technical storage to remember light and dark mode, maintain certain navigation preferences, store the cookie decision and protect the contact form from spam through Cloudflare Turnstile. These technologies are not used to build advertising profiles." },
+      { "title": "Google Analytics", "body": "If you accept it, Google Analytics helps us understand visits, pages viewed, language, general traffic source and interactions with buttons and forms. It may use cookies such as _ga and _ga_<identifier>. Analytics remains disabled until consent is given." },
+      { "title": "Cloudflare Turnstile", "body": "The contact form uses Cloudflare Turnstile to verify that submissions come from people and reduce spam. It may make technical requests to Cloudflare and use storage mechanisms provided by the service. It is necessary to submit the form." },
+      { "title": "Fonts and external services", "body": "The site's fonts are hosted locally. Links to WhatsApp, Instagram and Facebook lead to third-party sites, which apply their own policies once you leave Paleoware." },
+      { "title": "Consent management", "body": "You can accept, reject or configure optional technologies. Your decision is kept for six months and can be changed from the Cookie preferences link in the footer." },
+      { "title": "Deleting storage", "body": "You can delete cookies and browser storage through your browser settings. Some visual or navigation preferences may be lost when you do so." },
+      { "title": "Changes and contact", "body": "This policy may be updated when the technologies or providers we use change. For cookie and privacy questions, write to info@paleoware.com." }
+    ]
+  },
   "Footer": {
     "statement": "Custom sites for projects that refuse to go extinct.",
     "sitemap": "Site",
@@ -298,12 +329,12 @@
     "scaleTitle": "The projects we work on",
     "scaleBody": "We work with small and medium-sized projects: institutional sites, landing pages, catalogues, simple stores and web experiences that do not need a huge technical system. If you need a highly complex platform, many simultaneous users or a large backend, we are probably not the right team.",
     "methodTitle": "How we work",
-    "methodLead": "Four phases to move forward clearly, without meetings that lead nowhere.",
+    "methodLead": "Every project starts with questions and ends with a website built to do a specific job. Our method keeps decisions in order, so design does not run ahead of the problem and development does not become a chain of improvisations.",
     "phases": {
-      "dig": { "name": "Discovery", "desc": "We discuss goals, audience and scope before drawing anything." },
-      "classify": { "name": "Structure", "desc": "We organise content, references and priorities to decide what each screen needs to say." },
-      "assemble": { "name": "Design and development", "desc": "We design and build on the approved structure, with a clear scope." },
-      "hatch": { "name": "Launch", "desc": "We publish the site, configure measurement and explain how to maintain it." }
+      "dig": { "name": "Discovery", "desc": "We start by understanding what you need to achieve, who needs to find you and what a visitor should do when they arrive. We review context, references and project constraints to separate what matters now from what can wait. Before drawing a screen, we define the problem the website needs to solve." },
+      "classify": { "name": "Structure", "desc": "We turn that conversation into a map of content and journeys. We organise information, establish hierarchy and decide what each section needs in order to be clear. We also identify missing copy, images or materials, so content is part of the project from the beginning rather than a last-minute obstacle." },
+      "assemble": { "name": "Design and development", "desc": "With the structure approved, we build a visual identity and interface that can carry the project's message. We design the important states, adapt the experience to different screen sizes and develop a fast, maintainable and accessible foundation. The work advances through concrete decisions, limited review rounds and a visible scope." },
+      "hatch": { "name": "Launch", "desc": "Before launch we review content, links, forms and the experience on real devices. We connect the domain and relevant measurement tools, put the site online and explain how to maintain it. After publishing, we support the included adjustments so the website does not become abandoned the moment it goes live." }
     },
     "conditionsTitle": "Working conditions",
     "conditions": [

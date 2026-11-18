@@ -9,7 +9,7 @@ import { SiteHeader } from '@/components/site-header'
 import { AboutPageSchema } from '@/components/structured-data'
 import { siteConfig } from '@/config/site'
 import { routing } from '@/i18n/routing'
-import socialImage from '@/ISOTIPO.webp'
+import socialImage from '@/Paleoware-Logotipo.webp'
 
 type AboutPageProps = Readonly<{ params: Promise<{ locale: string }> }>
 
@@ -77,8 +77,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
         <section className="section about-page__section">
           <div className="shell about-page__grid">
-            <div><p className="label">01</p><h2>{t('whatTitle')}</h2><p>{t('whatBody')}</p></div>
-            <div><p className="label">02</p><h2>{t('scaleTitle')}</h2><p>{t('scaleBody')}</p></div>
+            <div><h2>{t('whatTitle')}</h2><p>{t('whatBody')}</p></div>
+            <div><h2>{t('scaleTitle')}</h2><p>{t('scaleBody')}</p></div>
           </div>
         </section>
 
@@ -93,14 +93,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
 
         <section className="section about-page__conditions">
           <div className="shell about-page__conditions-grid">
-            <div><p className="label">03</p><h2>{t('conditionsTitle')}</h2></div>
+            <div><h2>{t('conditionsTitle')}</h2></div>
             <ul>{conditions.map((condition) => <li key={condition}>{condition}</li>)}</ul>
           </div>
         </section>
 
         <section className="section about-page__contact">
           <div className="shell">
-            <p className="label">04</p>
             <h2>{t('contactTitle')}</h2>
             <p>{t('contactBody')}</p>
             <p className="about-page__contact-data">{siteConfig.contact.phoneDisplay} · {siteConfig.contact.email}</p>

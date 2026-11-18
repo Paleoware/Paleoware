@@ -11,7 +11,9 @@
   },
   "Navigation": {
     "services": "Servicios",
-    "about": "Paleoware",
+    "about": "Acerca de Paleoware",
+    "cookies": "Política de cookies",
+    "cookieSettings": "Preferencias de cookies",
     "faq": "Preguntas",
     "contact": "Contacto",
     "quote": "Hablemos",
@@ -212,6 +214,35 @@
       "verification": "Completá la verificación de seguridad antes de enviar."
     }
   },
+  "Cookies": {
+    "title": "Tu privacidad también importa",
+    "description": "Usamos almacenamiento técnico para que Paleoware funcione correctamente y, si lo aceptás, analítica para entender cómo se utiliza el sitio y mejorar la experiencia.",
+    "policyPath": "/es/cookies/",
+    "policyLink": "Leer la política de cookies",
+    "accept": "Aceptar todas",
+    "reject": "Rechazar opcionales",
+    "configure": "Configurar preferencias",
+    "save": "Guardar preferencias",
+    "alwaysOn": "Siempre activas",
+    "necessaryTitle": "Tecnologías necesarias",
+    "necessaryDescription": "Recuerdan preferencias básicas, protegen el formulario y guardan tu decisión de consentimiento.",
+    "analyticsTitle": "Analítica",
+    "analyticsDescription": "Ayuda a medir visitas, eventos, botones de contacto y formularios mediante Google Analytics.",
+    "pageTitle": "Política de cookies de Paleoware",
+    "updated": "Última actualización: 18/11/2026",
+    "intro": "Esta política explica cómo Paleoware utiliza cookies y tecnologías similares en paleoware.com.",
+    "responsible": "Responsable: Marcos Andres Ortega. Contacto: info@paleoware.com · +54 11 3411-7299.",
+    "sections": [
+      { "title": "¿Qué son las cookies?", "body": "Las cookies son pequeños archivos que un sitio puede almacenar en el navegador. También pueden utilizarse tecnologías similares, como localStorage y sessionStorage, para recordar preferencias y mantener funciones básicas." },
+      { "title": "Tecnologías necesarias", "body": "Paleoware utiliza almacenamiento técnico para recordar el modo claro u oscuro, mantener algunas preferencias de navegación, guardar la decisión sobre cookies y proteger el formulario contra spam mediante Cloudflare Turnstile. Estas tecnologías no se utilizan para crear perfiles publicitarios." },
+      { "title": "Google Analytics", "body": "Si lo aceptás, Google Analytics permite conocer visitas, páginas consultadas, idioma, origen general e interacciones con botones y formularios. Puede utilizar cookies como _ga y _ga_<identificador>. La analítica permanece desactivada hasta recibir consentimiento." },
+      { "title": "Cloudflare Turnstile", "body": "El formulario utiliza Cloudflare Turnstile para verificar que los envíos provienen de personas y reducir el spam. Puede realizar solicitudes técnicas a Cloudflare y utilizar mecanismos de almacenamiento propios del proveedor. Su funcionamiento es necesario para enviar el formulario." },
+      { "title": "Fuentes y servicios externos", "body": "Las fuentes del sitio se alojan localmente. Los enlaces a WhatsApp, Instagram y Facebook llevan a sitios de terceros, que aplican sus propias políticas cuando abandonás Paleoware." },
+      { "title": "Gestión del consentimiento", "body": "Podés aceptar, rechazar o configurar las tecnologías opcionales. La decisión se conserva durante seis meses y puede modificarse desde el enlace Preferencias de cookies del pie de página." },
+      { "title": "Cómo borrar el almacenamiento", "body": "Podés eliminar cookies y almacenamiento desde la configuración de tu navegador. Algunas preferencias visuales o de navegación pueden perderse al hacerlo." },
+      { "title": "Cambios y contacto", "body": "La política puede actualizarse si cambian las tecnologías o proveedores utilizados. Para consultas sobre cookies y privacidad, escribí a info@paleoware.com." }
+    ]
+  },
   "Footer": {
     "statement": "Sitios a medida para proyectos que no quieren extinguirse.",
     "sitemap": "Sitio",
@@ -298,12 +329,12 @@
     "scaleTitle": "Para qué proyectos trabajamos",
     "scaleBody": "Trabajamos con proyectos de pequeña y mediana escala: sitios institucionales, landings, catálogos, tiendas simples y experiencias web que no necesitan un sistema técnico enorme. Si necesitás una plataforma muy compleja, con muchos usuarios al mismo tiempo o un backend grande, probablemente no seamos el equipo indicado.",
     "methodTitle": "Cómo trabajamos",
-    "methodLead": "Cuatro fases para avanzar con claridad y sin reuniones que no terminan en algo.",
+    "methodLead": "Cada proyecto empieza con preguntas y termina con una web lista para cumplir una función concreta. La metodología ordena las decisiones para que el diseño no se adelante al problema y el desarrollo no se convierta en una sucesión de improvisaciones.",
     "phases": {
-      "dig": { "name": "Descubrimiento", "desc": "Conversamos sobre objetivos, público y alcance antes de dibujar nada." },
-      "classify": { "name": "Estructura", "desc": "Ordenamos contenidos, referencias y prioridades para decidir qué debe decir cada pantalla." },
-      "assemble": { "name": "Diseño y desarrollo", "desc": "Diseñamos y desarrollamos sobre la estructura aprobada, con un alcance claro." },
-      "hatch": { "name": "Publicación", "desc": "Publicamos el sitio, dejamos la medición configurada y explicamos cómo mantenerlo." }
+      "dig": { "name": "Descubrimiento", "desc": "Empezamos entendiendo qué querés lograr, quién necesita encontrarte y qué debería hacer una persona cuando llega a tu sitio. Revisamos el contexto, las referencias y las limitaciones del proyecto para separar lo urgente de lo accesorio. Antes de dibujar una pantalla, dejamos definido el problema que la web tiene que resolver." },
+      "classify": { "name": "Estructura", "desc": "Convertimos esa conversación en un mapa de contenidos y recorridos. Organizamos la información, definimos jerarquías y decidimos qué necesita cada sección para ser clara. También detectamos qué textos, imágenes o materiales faltan, para que el contenido forme parte del proyecto desde el principio y no aparezca como un obstáculo al final." },
+      "assemble": { "name": "Diseño y desarrollo", "desc": "Con la estructura aprobada, construimos una identidad visual y una interfaz que pueda sostener el mensaje del proyecto. Diseñamos los estados importantes, adaptamos la experiencia a distintos tamaños de pantalla y desarrollamos una base rápida, mantenible y accesible. El trabajo avanza sobre decisiones concretas, con revisiones acotadas y un alcance visible para todos." },
+      "hatch": { "name": "Publicación", "desc": "Antes de publicar revisamos los contenidos, los enlaces, los formularios y la experiencia en dispositivos reales. Dejamos conectados el dominio y las herramientas de medición que correspondan, hacemos la puesta en línea y explicamos cómo mantener el sitio. Después de la publicación, acompañamos los ajustes incluidos para que la web no quede abandonada apenas sale al mundo." }
     },
     "conditionsTitle": "Condiciones de trabajo",
     "conditions": [

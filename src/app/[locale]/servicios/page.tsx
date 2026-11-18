@@ -9,7 +9,7 @@ import { SiteHeader } from '@/components/site-header'
 import { serviceFamilies, serviceSlugs } from '@/config/services'
 import { routing } from '@/i18n/routing'
 import { PageSchema, ServiceListSchema } from '@/components/structured-data'
-import socialImage from '@/ISOTIPO.webp'
+import socialImage from '@/Paleoware-Logotipo.webp'
 
 type ServicesPageProps = Readonly<{
   params: Promise<{ locale: string }>

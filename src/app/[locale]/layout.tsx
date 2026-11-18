@@ -8,6 +8,7 @@ import {
 import { notFound } from 'next/navigation'
 import { LocaleLang } from '@/components/locale-lang'
 import { OrganizationSchema } from '@/components/structured-data'
+import { CookieBanner } from '@/components/cookie-banner'
 import { routing } from '@/i18n/routing'
 
 type LocaleLayoutProps = Readonly<{
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
       </a>
       <LocaleLang locale={locale} />
       <OrganizationSchema />
+      <CookieBanner />
       {children}
     </NextIntlClientProvider>
   )
