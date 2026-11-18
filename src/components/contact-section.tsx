@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import { siteConfig } from '@/config/site'
 import { ContactForm } from './contact-form'
 import { ContactMedia } from './contact-media'
+import { TrackedLink } from './tracked-link'
 
 export function ContactSection() {
   const t = useTranslations('Contact')
@@ -22,11 +23,13 @@ export function ContactSection() {
             <p className="contact__lead">{t('lead')}</p>
 
             <div className="contact__routes">
-              <a
+              <TrackedLink
                 className="route route--whatsapp"
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
+                event="contact_click"
+                params={{ channel: 'whatsapp', location: 'contact' }}
               >
                 <span className="route__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="presentation">
@@ -37,8 +40,8 @@ export function ContactSection() {
                 <span className="route__value">
                   {siteConfig.contact.phoneDisplay} <span className="route__arrow" aria-hidden="true">→</span>
                 </span>
-              </a>
-              <a className="route route--email" href={`mailto:${siteConfig.contact.email}`}>
+              </TrackedLink>
+              <TrackedLink className="route route--email" href={`mailto:${siteConfig.contact.email}`} event="contact_click" params={{ channel: 'email', location: 'contact' }}>
                 <span className="route__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="presentation">
                     <path d="M2 4h20v16H2V4Zm2 2v.5l8 5.3 8-5.3V6l-8 5.3L4 6Zm0 3v8h16V9l-8 5.3L4 9Z" />
@@ -48,7 +51,7 @@ export function ContactSection() {
                 <span className="route__value">
                   {siteConfig.contact.email} <span className="route__arrow" aria-hidden="true">→</span>
                 </span>
-              </a>
+              </TrackedLink>
             </div>
           </div>
 

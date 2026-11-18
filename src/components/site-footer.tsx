@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import logo from '@/Paleoware-new-logo.webp'
 import { siteConfig } from '@/config/site'
 import { ColorBar } from './color-bar'
+import { TrackedLink } from './tracked-link'
 
 type SiteFooterProps = Readonly<{ locale: string }>
 
@@ -30,6 +31,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <h3>{t('sitemap')}</h3>
             <ul>
               <li>
+                <Link href={`/${locale}/about/`}>{nav('about')}</Link>
+              </li>
+              <li>
                 <Link href={`/${locale}/servicios/`}>{nav('services')}</Link>
               </li>
               <li>
@@ -45,24 +49,24 @@ export function SiteFooter({ locale }: SiteFooterProps) {
             <h3>{t('contact')}</h3>
             <ul>
               <li>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                <TrackedLink href={whatsappUrl} target="_blank" rel="noreferrer" event="contact_click" params={{ channel: 'whatsapp', location: 'footer' }}>
                   WhatsApp
-                </a>
+                </TrackedLink>
               </li>
               <li>
-                <a href={`mailto:${siteConfig.contact.email}`}>
+                <TrackedLink href={`mailto:${siteConfig.contact.email}`} event="contact_click" params={{ channel: 'email', location: 'footer' }}>
                   {siteConfig.contact.email}
-                </a>
+                </TrackedLink>
               </li>
               <li>
-                <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer">
+                <TrackedLink href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer" event="social_click" params={{ network: 'instagram' }}>
                   Instagram
-                </a>
+                </TrackedLink>
               </li>
               <li>
-                <a href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer">
+                <TrackedLink href={siteConfig.socialLinks.facebook} target="_blank" rel="noreferrer" event="social_click" params={{ network: 'facebook' }}>
                   Facebook
-                </a>
+                </TrackedLink>
               </li>
             </ul>
           </div>

@@ -9,6 +9,7 @@ import { SiteHeader } from '@/components/site-header'
 import { serviceIds, serviceSlugs, type ServiceId } from '@/config/services'
 import { routing } from '@/i18n/routing'
 import { PageSchema, ServiceSchema } from '@/components/structured-data'
+import socialImage from '@/ISOTIPO.webp'
 
 type Props = Readonly<{ params: Promise<{ locale: string; service: string }> }>
 
@@ -48,6 +49,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t(`items.${service}.title`),
       description: t(`items.${service}.description`),
       url: path,
+      images: [{ url: socialImage.src, width: socialImage.width, height: socialImage.height, alt: 'Paleoware' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t(`items.${service}.title`),
+      description: t(`items.${service}.description`),
+      images: [socialImage.src],
     },
   }
 }

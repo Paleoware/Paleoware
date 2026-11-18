@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import socialImage from '@/ISOTIPO.webp'
 import { Analytics } from '@/components/analytics'
 import './globals.css'
 
@@ -17,6 +18,18 @@ export const metadata: Metadata = {
       'Diseño web con identidad, estrategia y tecnología para Argentina y mercados internacionales.',
     type: 'website',
     siteName: 'Paleoware',
+    images: [
+      {
+        url: socialImage.src,
+        width: socialImage.width,
+        height: socialImage.height,
+        alt: 'Paleoware',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [socialImage.src],
   },
 }
 

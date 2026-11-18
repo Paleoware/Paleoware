@@ -80,11 +80,13 @@ export function ContactForm() {
       resetTurnstile()
       setVerificationRequired(false)
       setStatus('success')
-      trackEvent('form_submit')
+      const locale = document.documentElement.lang || 'unknown'
+      trackEvent('form_submit', { form: 'contact', locale })
+      trackEvent('generate_lead', { method: 'contact_form', locale })
     } catch {
       resetTurnstile()
       setStatus('error')
-      trackEvent('form_submit_error')
+      trackEvent('form_submit_error', { form: 'contact', locale: document.documentElement.lang || 'unknown' })
     }
   }
 

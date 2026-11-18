@@ -11,6 +11,7 @@
   },
   "Navigation": {
     "services": "Servicios",
+    "about": "Paleoware",
     "faq": "Preguntas",
     "contact": "Contacto",
     "quote": "Hablemos",
@@ -35,9 +36,9 @@
     "cta": "Hablemos de tu proyecto"
   },
   "Services": {
-    "title": "Seis servicios, tres capas.",
+    "title": "Siete servicios, tres capas.",
     "lead": "Cada capa resuelve una parte distinta del mismo problema: qué decir, cómo construirlo y cómo hacerlo crecer.",
-    "cta": "Ver las seis fichas",
+    "cta": "Ver las siete fichas",
     "families": {
       "define": {
         "name": "Definir"
@@ -154,8 +155,8 @@
         ]
       }
     },
-    "note": "Los importes son de partida y no incluyen dominio ni hosting. Todo queda por escrito antes de empezar.",
-    "conversion": "La versión en dólares usa como referencia el dólar oficial comprador del Banco Nación: ARS 1.525 = USD 1 (17/11/2026). El valor final se confirma al cotizar.",
+    "note": "Los importes son de partida y no incluyen IVA. Todo queda por escrito antes de empezar.",
+    "conversion": "Los precios publicados son orientativos y pueden actualizarse. El valor final se confirma al cotizar.",
     "ecommerceLabel": "Servicio independiente"
   },
   "Faq": {
@@ -285,6 +286,36 @@
         "forWhom": "Marcas que necesitan verse coherentes en cada punto de contacto."
       }
     }
+  },
+  "AboutPage": {
+    "title": "Paleoware: estrategia, diseño y desarrollo web a medida",
+    "description": "Conocé qué es Paleoware, cómo trabajamos, qué proyectos aceptamos y cómo acompañamos cada desarrollo web.",
+    "home": "Inicio",
+    "eyebrow": "Sobre Paleoware",
+    "intro": "Paleoware crea sitios web con identidad para negocios, marcas y proyectos que necesitan verse claros, funcionar bien y crecer con una base sólida.",
+    "whatTitle": "Qué hacemos",
+    "whatBody": "Combinamos estrategia, contenido, diseño, desarrollo y medición para convertir una idea o un negocio en una presencia digital clara. Operamos principalmente en Argentina, pero aceptamos encargos de cualquier parte del mundo.",
+    "scaleTitle": "Para qué proyectos trabajamos",
+    "scaleBody": "Trabajamos con proyectos de pequeña y mediana escala: sitios institucionales, landings, catálogos, tiendas simples y experiencias web que no necesitan un sistema técnico enorme. Si necesitás una plataforma muy compleja, con muchos usuarios al mismo tiempo o un backend grande, probablemente no seamos el equipo indicado.",
+    "methodTitle": "Cómo trabajamos",
+    "methodLead": "Cuatro fases para avanzar con claridad y sin reuniones que no terminan en algo.",
+    "phases": {
+      "dig": { "name": "Descubrimiento", "desc": "Conversamos sobre objetivos, público y alcance antes de dibujar nada." },
+      "classify": { "name": "Estructura", "desc": "Ordenamos contenidos, referencias y prioridades para decidir qué debe decir cada pantalla." },
+      "assemble": { "name": "Diseño y desarrollo", "desc": "Diseñamos y desarrollamos sobre la estructura aprobada, con un alcance claro." },
+      "hatch": { "name": "Publicación", "desc": "Publicamos el sitio, dejamos la medición configurada y explicamos cómo mantenerlo." }
+    },
+    "conditionsTitle": "Condiciones de trabajo",
+    "conditions": [
+      "El alcance se aprueba antes de comenzar. Los cambios fuera de ese alcance se evalúan y cotizan por separado.",
+      "La cancelación debe comunicarse dentro de los primeros 10 días hábiles.",
+      "El adelanto no es reembolsable: reserva la agenda y cubre los costos iniciales del proyecto.",
+      "Si los materiales solicitados no llegan dentro de los primeros 5 días hábiles, el proyecto puede quedar pausado.",
+      "Si la falta de materiales supera los 15 días hábiles, el proyecto se considera cerrado."
+    ],
+    "contactTitle": "Contacto",
+    "contactBody": "¿Querés saber si tu proyecto encaja? Escribinos y lo conversamos.",
+    "back": "Volver al inicio"
   },
   "ServiceDetail": {
     "home": "Inicio",

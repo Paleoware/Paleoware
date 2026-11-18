@@ -11,6 +11,7 @@
   },
   "Navigation": {
     "services": "Services",
+    "about": "Paleoware",
     "faq": "Questions",
     "contact": "Contact",
     "quote": "Let's talk",
@@ -35,9 +36,9 @@
     "cta": "Let's talk about your project"
   },
   "Services": {
-    "title": "Six services, three layers.",
+    "title": "Seven services, three layers.",
     "lead": "Each layer solves a different part of the same problem: what to say, how to build it and how to make it grow.",
-    "cta": "See all six records",
+    "cta": "See all seven records",
     "families": {
       "define": {
         "name": "Define"
@@ -154,8 +155,8 @@
         ]
       }
     },
-    "note": "Prices are starting points and exclude domain and hosting. Everything is agreed in writing before we start.",
-    "conversion": "Dollar prices use the Banco Nación official buying rate as reference: ARS 1,525 = USD 1 (17 Nov 2026). The final value is confirmed when quoted.",
+    "note": "Prices are starting points and exclude VAT. Everything is agreed in writing before we start.",
+    "conversion": "Published prices are indicative and may change. The final value is confirmed when quoted.",
     "ecommerceLabel": "Independent service"
   },
   "Faq": {
@@ -285,6 +286,36 @@
         "forWhom": "Brands that need to look coherent at every touchpoint."
       }
     }
+  },
+  "AboutPage": {
+    "title": "Paleoware: strategy, design and custom web development",
+    "description": "Learn what Paleoware does, how we work, which projects we accept and how we support each web project.",
+    "home": "Home",
+    "eyebrow": "About Paleoware",
+    "intro": "Paleoware creates distinctive websites for businesses, brands and projects that need to be clear, reliable and built on a solid foundation.",
+    "whatTitle": "What we do",
+    "whatBody": "We combine strategy, content, design, development and measurement to turn an idea or business into a clear digital presence. We operate mainly in Argentina, but accept projects from anywhere in the world.",
+    "scaleTitle": "The projects we work on",
+    "scaleBody": "We work with small and medium-sized projects: institutional sites, landing pages, catalogues, simple stores and web experiences that do not need a huge technical system. If you need a highly complex platform, many simultaneous users or a large backend, we are probably not the right team.",
+    "methodTitle": "How we work",
+    "methodLead": "Four phases to move forward clearly, without meetings that lead nowhere.",
+    "phases": {
+      "dig": { "name": "Discovery", "desc": "We discuss goals, audience and scope before drawing anything." },
+      "classify": { "name": "Structure", "desc": "We organise content, references and priorities to decide what each screen needs to say." },
+      "assemble": { "name": "Design and development", "desc": "We design and build on the approved structure, with a clear scope." },
+      "hatch": { "name": "Launch", "desc": "We publish the site, configure measurement and explain how to maintain it." }
+    },
+    "conditionsTitle": "Working conditions",
+    "conditions": [
+      "The scope is approved before work begins. Changes outside that scope are reviewed and quoted separately.",
+      "Cancellations must be communicated within the first 10 business days.",
+      "The deposit is non-refundable: it reserves the schedule and covers initial project costs.",
+      "If requested materials are not delivered within the first 5 business days, the project may be paused.",
+      "If missing materials exceed 15 business days, the project is considered closed."
+    ],
+    "contactTitle": "Contact",
+    "contactBody": "Want to know if your project is a fit? Write to us and we will talk it through.",
+    "back": "Back to home"
   },
   "ServiceDetail": {
     "home": "Home",

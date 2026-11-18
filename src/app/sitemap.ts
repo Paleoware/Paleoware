@@ -58,6 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${siteConfig.url}/es/about/`,
+      alternates: { languages: { es: `${siteConfig.url}/es/about/`, en: `${siteConfig.url}/en/about/` } },
+    },
+    {
+      url: `${siteConfig.url}/en/about/`,
+      alternates: { languages: { es: `${siteConfig.url}/es/about/`, en: `${siteConfig.url}/en/about/` } },
+    },
     ...servicePages,
   ]
 }

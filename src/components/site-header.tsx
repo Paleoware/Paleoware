@@ -9,6 +9,7 @@ import logo from '@/Paleoware-Logotipo.webp'
 import boneIcon from '@/Text.png'
 import mobileBoneIcon from '@/hueso.webp'
 import { ThemeToggle } from './theme-toggle'
+import { trackEvent } from '@/lib/analytics'
 
 type SiteHeaderProps = Readonly<{ locale: string }>
 
@@ -30,6 +31,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
   }
 
   const links = [
+    { href: `/${locale}/about/`, label: t('about'), key: 'about' },
     { href: `/${locale}/servicios/`, label: t('services'), key: 'services' },
     { href: `${home}#preguntas`, label: t('faq'), key: 'faq' },
     { href: `${home}#contacto`, label: t('contact'), key: 'contact' },
@@ -129,6 +131,7 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 key={link.key}
                 className="site-nav__link"
                 href={link.href}
+                onClick={() => trackEvent('nav_click', { location: 'header', link: link.key })}
                 aria-current={
                   link.key === 'services' && pathname.includes('/servicios')
                     ? 'page'
@@ -147,7 +150,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               <Link
                 href={locale === 'es' ? pathname : switchHref}
                 aria-current={locale === 'es'}
-                onClick={locale === 'es' ? undefined : rememberScrollPosition}
+                onClick={locale === 'es' ? undefined : () => {
+                  rememberScrollPosition()
+                  trackEvent('language_switch', { from: locale, to: 'es' })
+                }}
               >
                 ES
               </Link>
@@ -155,13 +161,16 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
               <Link
                 href={locale === 'en' ? pathname : switchHref}
                 aria-current={locale === 'en'}
-                onClick={locale === 'en' ? undefined : rememberScrollPosition}
+                onClick={locale === 'en' ? undefined : () => {
+                  rememberScrollPosition()
+                  trackEvent('language_switch', { from: locale, to: 'en' })
+                }}
               >
                 EN
               </Link>
             </div>
 
-            <Link ref={ctaRef} className="btn btn--primary btn--sm" href={`${home}#contacto`}>
+            <Link ref={ctaRef} className="btn btn--primary btn--sm" href={`${home}#contacto`} onClick={() => trackEvent('cta_click', { location: 'header' })}>
               {t('quote')}
             </Link>
 
@@ -220,7 +229,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 <Link
                   href={locale === 'es' ? pathname : switchHref}
                   aria-current={locale === 'es'}
-                  onClick={locale === 'es' ? undefined : rememberScrollPosition}
+                onClick={locale === 'es' ? undefined : () => {
+                  rememberScrollPosition()
+                  trackEvent('language_switch', { from: locale, to: 'es' })
+                }}
                 >
                   ES
                 </Link>
@@ -228,7 +240,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 <Link
                   href={locale === 'en' ? pathname : switchHref}
                   aria-current={locale === 'en'}
-                  onClick={locale === 'en' ? undefined : rememberScrollPosition}
+                onClick={locale === 'en' ? undefined : () => {
+                  rememberScrollPosition()
+                  trackEvent('language_switch', { from: locale, to: 'en' })
+                }}
                 >
                   EN
                 </Link>
@@ -238,7 +253,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
             <Link
               className="btn btn--primary"
               href={`${home}#contacto`}
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false)
+                trackEvent('cta_click', { location: 'mobile_menu' })
+              }}
             >
               {t('quote')}
             </Link>

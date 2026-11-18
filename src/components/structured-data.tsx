@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site'
+import socialImage from '@/ISOTIPO.webp'
 
 const SITE_URL = siteConfig.url
 const ORGANIZATION_ID = `${SITE_URL}/#organization`
@@ -23,6 +24,7 @@ export function OrganizationSchema() {
             '@id': ORGANIZATION_ID,
             name: siteConfig.name,
             url: SITE_URL,
+            logo: `${SITE_URL}${socialImage.src}`,
             sameAs: [siteConfig.socialLinks.instagram, siteConfig.socialLinks.facebook],
             contactPoint: {
               '@type': 'ContactPoint',
@@ -95,6 +97,32 @@ export function PageSchema({ locale, path, name, description, breadcrumb }: Page
   }
 
   return <JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }} />
+}
+
+export function AboutPageSchema({
+  locale,
+  path,
+  name,
+  description,
+}: Omit<PageSchemaProps, 'breadcrumb'>) {
+  const url = `${SITE_URL}${path}/`.replace(/\/\/+$/, '/')
+
+  return (
+    <JsonLd
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        '@id': `${url}#about-page`,
+        url,
+        name,
+        description,
+        inLanguage: locale,
+        isPartOf: { '@id': WEBSITE_ID },
+        about: { '@id': ORGANIZATION_ID },
+        publisher: { '@id': ORGANIZATION_ID },
+      }}
+    />
+  )
 }
 
 type ServiceSchemaProps = Readonly<{

@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { trackEvent } from '@/lib/analytics'
 
 gsap.registerPlugin(useGSAP)
 
@@ -394,7 +395,7 @@ export function Hero() {
             </h1>
             <p className="hero__lead">{t('lead')}</p>
             <div className="hero__cta">
-              <Link className="btn btn--primary hero__cta-button" href="#contacto" ref={ctaRef}>
+              <Link className="btn btn--primary hero__cta-button" href="#contacto" ref={ctaRef} onClick={() => trackEvent('cta_click', { location: 'hero' })}>
                 <span className="hero__cta-particles" aria-hidden="true">
                   {Array.from({ length: 8 }, (_, index) => (
                     <span className="hero__cta-particle" key={index} />

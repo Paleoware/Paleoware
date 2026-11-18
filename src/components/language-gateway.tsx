@@ -27,6 +27,7 @@ export function LanguageGateway({ basePath }: LanguageGatewayProps) {
   }, [basePath])
 
   const t = esMessages.LanguageGateway
+  const normalizedBasePath = basePath ? `/${basePath.replace(/^\/+|\/+$/g, '')}` : ''
 
   return (
     <main className="language-gateway">
@@ -40,8 +41,8 @@ export function LanguageGateway({ basePath }: LanguageGatewayProps) {
       />
       <p>{t.loading}</p>
       <div className="language-gateway__links">
-        <Link href="/es/">{t.spanish}</Link>
-        <Link href="/en/">{t.english}</Link>
+        <Link href={`${normalizedBasePath}/es/`}>{t.spanish}</Link>
+        <Link href={`${normalizedBasePath}/en/`}>{t.english}</Link>
       </div>
     </main>
   )
