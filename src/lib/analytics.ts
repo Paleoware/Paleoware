@@ -1,12 +1,20 @@
-import { sendGAEvent } from '@next/third-parties/google'
+import { readCookieConsent } from '@/components/cookie-consent'
 
 export function trackEvent(
   name: string,
   params?: Record<string, string | number | boolean>,
 ) {
+  if (
+    typeof window === 'undefined' ||
+    !readCookieConsent()?.analytics ||
+    typeof window.gtag !== 'function'
+  ) {
+    return
+  }
+
   if (params) {
-    sendGAEvent('event', name, params)
+    window.gtag('event', name, params)
   } else {
-    sendGAEvent('event', name)
+    window.gtag('event', name)
   }
 }
