@@ -542,6 +542,20 @@ button {
   .menu-btn {
     display: grid;
   }
+
+  .menu-btn__glyph::before,
+  .menu-btn__glyph::after {
+    -webkit-mask: var(--mobile-bone-icon) center / 10px 26px no-repeat;
+    mask: var(--mobile-bone-icon) center / 10px 26px no-repeat;
+  }
+
+  .menu-btn__glyph::before {
+    transform: translateY(-5px) rotate(90deg);
+  }
+
+  .menu-btn__glyph::after {
+    transform: translateY(5px) rotate(90deg);
+  }
 }
 
 /* Drawer */
@@ -1111,6 +1125,47 @@ body[data-menu-open="true"] .site-footer {
   margin-top: var(--space-6);
   font-size: var(--text-sm);
   color: var(--ink-3);
+}
+
+.tier--consultation {
+  margin-top: var(--space-5);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--line-strong);
+}
+
+.tier__consultation-price {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--accent);
+}
+
+.tier__fill--static {
+  width: 100%;
+  transform: none;
+}
+
+/* ---------------------------------------------------------- SERVICE DETAIL -- */
+.service-detail__hero {
+  margin-top: var(--header-h);
+  padding-block: clamp(72px, 12vw, 150px) clamp(56px, 8vw, 96px);
+  background: var(--bg-well);
+  color: var(--hueso);
+}
+
+.service-detail__hero .link-arrow { color: var(--hueso); }
+.service-detail__hero .label { margin-top: clamp(48px, 8vw, 100px); color: var(--helecho); }
+.service-detail__hero h1 { max-width: 14ch; margin-top: var(--space-3); font-size: clamp(48px, 8vw, 112px); line-height: .92; }
+.service-detail__intro { max-width: 52ch; margin-top: var(--space-6); font-size: var(--text-lg); color: color-mix(in srgb, var(--hueso) 74%, transparent); }
+.service-detail__grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); gap: clamp(40px, 10vw, 160px); }
+.service-detail__grid h2 { max-width: 14ch; margin-block: var(--space-3) var(--space-5); font-size: clamp(34px, 5vw, 66px); line-height: .98; }
+.service-detail__copy { max-width: 58ch; margin-bottom: var(--space-6); color: var(--ink-2); }
+.service-detail__aside { align-self: start; padding: var(--space-5); border-top: 2px solid var(--accent); background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.service-detail__aside ul { display: grid; gap: var(--space-3); margin-block: var(--space-3) var(--space-6); }
+.service-detail__aside li { padding-bottom: var(--space-3); border-bottom: 1px solid var(--line); }
+
+@media (max-width: 767px) {
+  .service-detail__grid { grid-template-columns: 1fr; }
+  .service-detail__hero h1 { font-size: clamp(44px, 13vw, 72px); }
 }
 
 /* -------------------------------------------------------------- PREGUNTAS -- */

@@ -6,8 +6,9 @@ import type { Metadata } from 'next'
 import { CustomCursor } from '@/components/custom-cursor'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
-import { serviceFamilies } from '@/config/services'
+import { serviceFamilies, serviceSlugs } from '@/config/services'
 import { routing } from '@/i18n/routing'
+import { PageSchema, ServiceListSchema } from '@/components/structured-data'
 
 type ServicesPageProps = Readonly<{
   params: Promise<{ locale: string }>
@@ -62,6 +63,13 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
   const t = await getTranslations('ServicesPage')
   const services = await getTranslations('Services')
   const nav = await getTranslations('Navigation')
+  const serviceItems = serviceFamilies.flatMap((family) =>
+    family.services.map((id) => ({
+      name: services(`items.${id}.name`),
+      path: `/${locale}/servicios/${serviceSlugs[id]}`,
+      description: services(`items.${id}.promise`),
+    })),
+  )
 
   return (
     <>
@@ -69,8 +77,25 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
       <SiteHeader locale={locale} />
 
       <main id="contenido" data-stratum="01">
+        <PageSchema
+          locale={locale}
+          path={`/${locale}/servicios`}
+          name={t('title')}
+          description={t('lead')}
+          breadcrumb={[
+            { name: t('home'), path: `/${locale}` },
+            { name: nav('services'), path: `/${locale}/servicios` },
+          ]}
+        />
+        <ServiceListSchema locale={locale} items={serviceItems} />
         <header className="page-head">
           <div className="shell">
+            <nav className="breadcrumbs" aria-label={t('home')}>
+              <ol>
+                <li><Link href={`/${locale}/`}>{t('home')}</Link></li>
+                <li aria-current="page">{nav('services')}</li>
+              </ol>
+            </nav>
             <h1>{t('title')}</h1>
             <p className="page-head__lead">{t('lead')}</p>
             <Link className="link-arrow page-head__back" href={`/${locale}/`}>
@@ -89,13 +114,17 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                 const includes = t.raw(`items.${id}.includes`) as string[]
 
                 return (
-                  <article className="svc-record" id={id} key={id}>
+                    <article className="svc-record" id={id} key={id}>
                     <div className="svc-record__body">
                       <div>
                         <h3>{services(`items.${id}.name`)}</h3>
                         <p className="svc-record__promise">
                           {services(`items.${id}.promise`)}
                         </p>
+                        <Link className="link-arrow" href={`/${locale}/servicios/${serviceSlugs[id]}/`}>
+                          {t('viewDetails')}
+                          <span aria-hidden="true">→</span>
+                        </Link>
                         <Link className="link-arrow" href={`/${locale}/#contacto`}>
                           {nav('quote')}
                           <span aria-hidden="true">→</span>

@@ -7,6 +7,7 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { useTranslations } from 'next-intl'
 import logo from '@/Paleoware-Logotipo.webp'
 import boneIcon from '@/Text.png'
+import mobileBoneIcon from '@/hueso.webp'
 import { ThemeToggle } from './theme-toggle'
 
 type SiteHeaderProps = Readonly<{ locale: string }>
@@ -176,7 +177,10 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
                 className="menu-btn__glyph"
                 data-open={open}
                 aria-hidden="true"
-                style={{ '--bone-icon': `url("${boneIcon.src}")` } as CSSProperties}
+                 style={{
+                   '--bone-icon': `url("${boneIcon.src}")`,
+                   '--mobile-bone-icon': `url("${mobileBoneIcon.src}")`,
+                 } as CSSProperties}
               />
             </button>
           </div>

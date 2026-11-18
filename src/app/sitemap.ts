@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
+import { serviceIds, serviceSlugs } from '@/config/services'
 
 export const dynamic = 'force-static'
 
@@ -9,6 +10,27 @@ const languages = {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const servicePages = serviceIds.flatMap((service) => [
+    {
+      url: `${siteConfig.url}/es/servicios/${serviceSlugs[service]}/`,
+      alternates: {
+        languages: {
+          es: `${siteConfig.url}/es/servicios/${serviceSlugs[service]}/`,
+          en: `${siteConfig.url}/en/servicios/${serviceSlugs[service]}/`,
+        },
+      },
+    },
+    {
+      url: `${siteConfig.url}/en/servicios/${serviceSlugs[service]}/`,
+      alternates: {
+        languages: {
+          es: `${siteConfig.url}/es/servicios/${serviceSlugs[service]}/`,
+          en: `${siteConfig.url}/en/servicios/${serviceSlugs[service]}/`,
+        },
+      },
+    },
+  ])
+
   return [
     {
       url: `${siteConfig.url}/es/`,
@@ -36,5 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    ...servicePages,
   ]
 }

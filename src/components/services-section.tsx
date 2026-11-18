@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { serviceFamilies } from '@/config/services'
+import { serviceFamilies, serviceSlugs } from '@/config/services'
 import { Reveal } from './reveal'
 import { SectionHead } from './section-head'
 
@@ -25,7 +25,7 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
               <ul className="band__list">
                 {family.services.map((id) => (
                   <li key={id}>
-                    <Link className="svc" href={`/${locale}/servicios/#${id}`}>
+                    <Link className="svc" href={`/${locale}/servicios/${serviceSlugs[id]}/`}>
                       <span className="svc__body">
                         <span className="svc__name">{t(`items.${id}.name`)}</span>
                         <span className="svc__promise">{t(`items.${id}.promise`)}</span>

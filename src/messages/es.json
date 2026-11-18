@@ -73,6 +73,10 @@
       "marketing": {
         "name": "Marketing digital",
         "promise": "Contenido y campañas con rumbo."
+      },
+      "graphicDesign": {
+        "name": "Diseño gráfico",
+        "promise": "Una identidad lista para crecer."
       }
     }
   },
@@ -126,7 +130,7 @@
         "price": "800.000",
         "items": [
           "De 6 a 10 páginas",
-          "Dos idiomas",
+          "Un idioma",
           "Analítica incluida"
         ]
       },
@@ -134,13 +138,25 @@
         "name": "Holotipo",
         "price": "1.200.000",
         "items": [
-          "Más de 10 páginas o e-commerce",
-          "Dos idiomas",
+          "Más de 10 páginas",
+          "Un idioma",
           "Analítica incluida"
+        ]
+      },
+      "ecommerce": {
+        "name": "Pieza única",
+        "price": "A consultar",
+        "items": [
+          "Tienda online",
+          "Catálogo y fichas de producto",
+          "Checkout conectado",
+          "Medición de compra"
         ]
       }
     },
-    "note": "Los importes son de partida y no incluyen dominio ni hosting. Todo queda por escrito antes de empezar."
+    "note": "Los importes son de partida y no incluyen dominio ni hosting. Todo queda por escrito antes de empezar.",
+    "conversion": "La versión en dólares usa como referencia el dólar oficial comprador del Banco Nación: ARS 1.525 = USD 1 (17/11/2026). El valor final se confirma al cotizar.",
+    "ecommerceLabel": "Servicio independiente"
   },
   "Faq": {
     "title": "Preguntas antes de empezar.",
@@ -203,9 +219,11 @@
     "top": "Volver arriba"
   },
   "ServicesPage": {
+    "home": "Inicio",
     "title": "Servicios de diseño y desarrollo web",
     "lead": "Estrategia, diseño web, desarrollo, e-commerce, SEO y contenido para negocios y proyectos de toda Argentina y mercados internacionales.",
     "back": "Volver al inicio",
+    "viewDetails": "Ver servicio",
     "includes": "Incluye",
     "forWhom": "Para quién",
     "cta": "Hablemos de tu proyecto",
@@ -257,7 +275,31 @@
           "Campañas pagas"
         ],
         "forWhom": "Quien publica sin rumbo y quiere constancia."
+      },
+      "graphicDesign": {
+        "includes": [
+          "Kit de marca",
+          "Logo y variantes",
+          "Paleta, tipografías y usos"
+        ],
+        "forWhom": "Marcas que necesitan verse coherentes en cada punto de contacto."
       }
+    }
+  },
+  "ServiceDetail": {
+    "home": "Inicio",
+    "back": "Volver a servicios",
+    "deliverables": "La entrega",
+    "includes": "Incluye",
+    "forWhom": "Para quién",
+    "items": {
+      "strategy": { "eyebrow": "01 / Definir", "title": "Estrategia digital para ordenar una idea", "description": "Estrategia, mensaje y estructura para proyectos que necesitan una dirección digital clara.", "intro": "Antes de diseñar, definimos qué tiene que decir tu proyecto, a quién y en qué orden.", "heading": "Un mapa antes de construir", "body": "Investigamos referencias, afinamos el mensaje y convertimos objetivos dispersos en una estructura que se pueda diseñar, desarrollar y medir.", "includes": ["Investigación y referencias", "Mensaje y jerarquía", "Mapa del sitio", "Prioridades de contenido"], "forWhom": "Proyectos que todavía no saben qué decir ni a quién." },
+      "webDesign": { "eyebrow": "02 / Construir", "title": "Diseño web con identidad propia", "description": "Diseño de interfaces web a medida para marcas que necesitan una presencia reconocible.", "intro": "Una interfaz no es decoración: es la forma en que una marca se vuelve fácil de entender y recordar.", "heading": "Una interfaz que habla por tu marca", "body": "Creamos el sistema visual, la composición y los estados de cada pantalla antes de pasar al código, para que el sitio tenga criterio y no una colección de plantillas.", "includes": ["Sistema visual aplicado", "Prototipo navegable", "Diseño de estados", "Guía de componentes"], "forWhom": "Marcas con identidad pero sin una interfaz consistente." },
+      "webCreation": { "eyebrow": "03 / Publicar", "title": "Desarrollo web a medida", "description": "Desarrollo y publicación de sitios web rápidos, mantenibles y preparados para crecer.", "intro": "Pasamos de una estructura aprobada a un sitio real, responsive y listo para recibir visitas.", "heading": "Código que sostiene la experiencia", "body": "Desarrollamos el sitio, cargamos el contenido, conectamos dominio y analítica y dejamos una base clara para futuras mejoras.", "includes": ["Desarrollo a medida", "Carga de contenido", "Responsive y accesibilidad", "Publicación y dominio"], "forWhom": "Negocios y proyectos que necesitan existir bien y rápido." },
+      "ecommerce": { "eyebrow": "04 / Vender", "title": "E-commerce para vender sin fricción", "description": "Catálogo, fichas de producto y checkout conectado para negocios que venden online.", "intro": "La tienda debe despejar dudas y acompañar la decisión de compra, no agregar pasos innecesarios.", "heading": "Una compra clara de principio a fin", "body": "Ordenamos catálogo, información de producto y flujo de compra para que cada consulta tenga un siguiente paso medible.", "includes": ["Catálogo y fichas de producto", "Checkout conectado", "Medición de compra", "Configuración inicial"], "forWhom": "Negocios que venden productos y pierden consultas." },
+      "seoAnalytics": { "eyebrow": "05 / Crecer", "title": "SEO técnico y analítica", "description": "SEO técnico y medición para sitios que necesitan entender qué funciona y qué mejorar.", "intro": "No se puede mejorar lo que no se puede leer: dejamos visibles los problemas y las señales importantes.", "heading": "Visibilidad con una lectura útil", "body": "Revisamos la base técnica, configuramos medición y organizamos un panel para tomar decisiones con datos, sin prometer resultados que todavía no tienen evidencia.", "includes": ["SEO técnico", "Analítica configurada", "Panel de lectura", "Recomendaciones priorizadas"], "forWhom": "Sitios que no están creciendo o necesitan medir mejor." },
+      "marketing": { "eyebrow": "06 / Sostener", "title": "Marketing digital con rumbo", "description": "Contenido y campañas digitales para proyectos que necesitan constancia y una línea editorial clara.", "intro": "Publicar más no siempre es comunicar mejor: primero definimos una cadencia y una razón para cada pieza.", "heading": "Constancia sin publicar por publicar", "body": "Armamos un calendario, piezas para redes y campañas pagas alineadas con el mensaje y los objetivos del proyecto.", "includes": ["Calendario de contenido", "Piezas para redes", "Campañas pagas", "Criterios de medición"], "forWhom": "Proyectos que publican sin rumbo y buscan consistencia." },
+      "graphicDesign": { "eyebrow": "07 / Identificar", "title": "Diseño gráfico para crear una marca reconocible", "description": "Kits de marca e identidad visual para proyectos que necesitan verse coherentes en todos sus puntos de contacto.", "intro": "Una identidad visual convierte decisiones sueltas en un sistema que otras personas pueden usar sin perder el carácter de la marca.", "heading": "Un kit de marca para sostener tu identidad", "body": "Definimos logo y variantes, paleta, tipografías, recursos gráficos y reglas de uso para que tu marca pueda crecer en web, redes y piezas impresas.", "includes": ["Kit de marca", "Logo y variantes", "Paleta y tipografías", "Reglas de uso", "Piezas base"], "forWhom": "Marcas que necesitan coherencia visual antes de crecer." }
     }
   },
   "NotFound": {

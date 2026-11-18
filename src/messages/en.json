@@ -73,6 +73,10 @@
       "marketing": {
         "name": "Digital marketing",
         "promise": "Content and campaigns with direction."
+      },
+      "graphicDesign": {
+        "name": "Graphic design",
+        "promise": "An identity ready to grow."
       }
     }
   },
@@ -126,7 +130,7 @@
         "price": "514",
         "items": [
           "6 to 10 pages",
-          "Two languages",
+          "One language",
           "Analytics included"
         ]
       },
@@ -134,13 +138,25 @@
         "name": "Holotype",
         "price": "772",
         "items": [
-          "10+ pages or e-commerce",
-          "Two languages",
+          "10+ pages",
+          "One language",
           "Analytics included"
+        ]
+      },
+      "ecommerce": {
+        "name": "One-of-a-kind piece",
+        "price": "On request",
+        "items": [
+          "Online store",
+          "Catalogue and product pages",
+          "Connected checkout",
+          "Purchase tracking"
         ]
       }
     },
-    "note": "Prices are starting points and exclude domain and hosting. Everything is agreed in writing before we start."
+    "note": "Prices are starting points and exclude domain and hosting. Everything is agreed in writing before we start.",
+    "conversion": "Dollar prices use the Banco Nación official buying rate as reference: ARS 1,525 = USD 1 (17 Nov 2026). The final value is confirmed when quoted.",
+    "ecommerceLabel": "Independent service"
   },
   "Faq": {
     "title": "Questions before we start.",
@@ -203,9 +219,11 @@
     "top": "Back to top"
   },
   "ServicesPage": {
+    "home": "Home",
     "title": "Web design and development services",
     "lead": "Strategy, web design, development, e-commerce, SEO and content for businesses and projects across Argentina and international markets.",
     "back": "Back to home",
+    "viewDetails": "View service",
     "includes": "Includes",
     "forWhom": "For whom",
     "cta": "Let's talk about your project",
@@ -257,7 +275,31 @@
           "Paid campaigns"
         ],
         "forWhom": "Anyone posting without direction who wants consistency."
+      },
+      "graphicDesign": {
+        "includes": [
+          "Brand kit",
+          "Logo and variations",
+          "Colours, type and usage"
+        ],
+        "forWhom": "Brands that need to look coherent at every touchpoint."
       }
+    }
+  },
+  "ServiceDetail": {
+    "home": "Home",
+    "back": "Back to services",
+    "deliverables": "The deliverable",
+    "includes": "Includes",
+    "forWhom": "For whom",
+    "items": {
+      "strategy": { "eyebrow": "01 / Define", "title": "Digital strategy for an idea that needs direction", "description": "Strategy, messaging and structure for projects that need a clear digital direction.", "intro": "Before we design, we define what your project needs to say, to whom and in what order.", "heading": "A map before we build", "body": "We research references, sharpen the message and turn scattered goals into a structure that can be designed, built and measured.", "includes": ["Research and references", "Message and hierarchy", "Sitemap", "Content priorities"], "forWhom": "Projects that do not know what to say or to whom yet." },
+      "webDesign": { "eyebrow": "02 / Build", "title": "Web design with its own character", "description": "Custom interface design for brands that need a recognisable digital presence.", "intro": "An interface is not decoration: it is how a brand becomes easy to understand and remember.", "heading": "An interface that speaks for your brand", "body": "We create the visual system, composition and states for every screen before code, so the site has a point of view instead of a collection of templates.", "includes": ["Applied visual system", "Navigable prototype", "State design", "Component guidance"], "forWhom": "Brands with character but no consistent interface." },
+      "webCreation": { "eyebrow": "03 / Launch", "title": "Custom website development", "description": "Development and launch of fast, maintainable websites prepared to grow.", "intro": "We turn an approved structure into a real, responsive site ready to receive visitors.", "heading": "Code that supports the experience", "body": "We develop the site, load the content, connect the domain and analytics, and leave a clear base for future improvements.", "includes": ["Custom development", "Content loading", "Responsive accessibility", "Launch and domain"], "forWhom": "Businesses and projects that need to exist well and fast." },
+      "ecommerce": { "eyebrow": "04 / Sell", "title": "E-commerce without friction", "description": "Catalogue, product pages and connected checkout for businesses selling online.", "intro": "A store should remove doubts and support the buying decision, not add unnecessary steps.", "heading": "A clear purchase from start to finish", "body": "We organise the catalogue, product information and purchase flow so every enquiry has a measurable next step.", "includes": ["Catalogue and product pages", "Connected checkout", "Purchase tracking", "Initial setup"], "forWhom": "Businesses selling products and losing enquiries." },
+      "seoAnalytics": { "eyebrow": "05 / Grow", "title": "Technical SEO and analytics", "description": "Technical SEO and measurement for sites that need to understand what works and what to improve.", "intro": "You cannot improve what you cannot read: we make the important problems and signals visible.", "heading": "Visibility with a useful read", "body": "We review the technical foundation, configure measurement and organise a dashboard for data-informed decisions, without claiming results that lack evidence.", "includes": ["Technical SEO", "Analytics configuration", "Reading dashboard", "Prioritised recommendations"], "forWhom": "Sites that are not growing or need better measurement." },
+      "marketing": { "eyebrow": "06 / Sustain", "title": "Digital marketing with direction", "description": "Content and digital campaigns for projects that need consistency and a clear editorial line.", "intro": "Publishing more is not always communicating better: we start with a rhythm and a reason for every piece.", "heading": "Consistency without posting for its own sake", "body": "We build a calendar, social pieces and paid campaigns aligned with the project's message and goals.", "includes": ["Content calendar", "Social pieces", "Paid campaigns", "Measurement criteria"], "forWhom": "Projects posting without direction that want consistency." },
+      "graphicDesign": { "eyebrow": "07 / Identify", "title": "Graphic design for a recognisable brand", "description": "Brand kits and visual identity for projects that need to look coherent across every touchpoint.", "intro": "A visual identity turns scattered decisions into a system other people can use without losing the brand's character.", "heading": "A brand kit that can carry your identity", "body": "We define the logo and variations, colours, type, graphic resources and usage rules so your brand can grow across web, social and print.", "includes": ["Brand kit", "Logo and variations", "Colours and type", "Usage rules", "Starter pieces"], "forWhom": "Brands that need visual coherence before they grow." }
     }
   },
   "NotFound": {

@@ -49,9 +49,24 @@ export function PricingSection() {
               </Reveal>
             )
           })}
+          <div className="tier tier--consultation">
+            <div className="tier__top">
+              <h3 className="tier__name">{t('tiers.ecommerce.name')}</h3>
+              <span className="tier__from">{t('tiers.ecommerce.price')}</span>
+            </div>
+
+            <div className="tier__bar" aria-hidden="true">
+              <span className="tier__fill tier__fill--static" />
+            </div>
+            <ul className="tier__items">
+              {(t.raw('tiers.ecommerce.items') as string[]).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <p className="tiers__note">{t('note')}</p>
+        <p className="tiers__note">{t('note')} {t('conversion')}</p>
       </div>
     </section>
   )

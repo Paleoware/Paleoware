@@ -7,6 +7,7 @@ import {
 } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { LocaleLang } from '@/components/locale-lang'
+import { OrganizationSchema } from '@/components/structured-data'
 import { routing } from '@/i18n/routing'
 
 type LocaleLayoutProps = Readonly<{
@@ -68,6 +69,7 @@ export default async function LocaleLayout({
         {t('skip')}
       </a>
       <LocaleLang locale={locale} />
+      <OrganizationSchema />
       {children}
     </NextIntlClientProvider>
   )
