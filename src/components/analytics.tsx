@@ -5,7 +5,7 @@ import { COOKIE_CONSENT_EVENT, readCookieConsent } from './cookie-consent'
 
 declare global {
   interface Window {
-    dataLayer?: unknown[]
+    dataLayer?: ArrayLike<unknown>[]
     gtag?: (...args: unknown[]) => void
   }
 }
@@ -48,7 +48,11 @@ export function Analytics() {
     if (document.getElementById('paleoware-ga-script')) return
 
     window.dataLayer = window.dataLayer || []
-    window.gtag = (...args: unknown[]) => window.dataLayer?.push(args)
+    window.gtag = function gtag() {
+      // Google expects the Arguments object in dataLayer, not a copied array.
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer?.push(arguments)
+    }
     window.gtag('js', new Date())
     window.gtag('config', gaId)
 
