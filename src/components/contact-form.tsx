@@ -1,7 +1,8 @@
 'use client'
 
 import { FormEvent, useRef, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { trackEvent } from '@/lib/analytics'
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error' | 'unconfigured'
@@ -16,6 +17,7 @@ declare global {
 
 export function ContactForm() {
   const t = useTranslations('Contact.form')
+  const locale = useLocale()
   const formRef = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState<FormStatus>('idle')
   const [verificationRequired, setVerificationRequired] = useState(false)
@@ -121,7 +123,13 @@ export function ContactForm() {
 
         <label className="consent">
           <input name="privacy" type="checkbox" required />
-          <span>{t('privacy')}</span>
+          <span>
+            {t('privacyPrefix')}{' '}
+            <Link href={`/${locale}/${locale === 'es' ? 'privacidad' : 'privacy'}/`}>
+              {t('privacyLink')}
+            </Link>
+            {t('privacySuffix')}
+          </span>
         </label>
 
         {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ? (

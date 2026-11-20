@@ -49,6 +49,11 @@ export function SiteFooter({ locale }: SiteFooterProps) {
               <li>
                 <Link href={`/${locale}/cookies/`}>{nav('cookies')}</Link>
               </li>
+              <li>
+                <Link href={`/${locale}/${locale === 'es' ? 'privacidad' : 'privacy'}/`}>
+                  {nav('privacy')}
+                </Link>
+              </li>
             </ul>
           </div>
 

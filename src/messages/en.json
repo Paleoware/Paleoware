@@ -13,6 +13,7 @@
     "services": "Services",
     "about": "About Paleoware",
     "cookies": "Cookie policy",
+    "privacy": "Privacy policy",
     "cookieSettings": "Cookie preferences",
     "faq": "Questions",
     "contact": "Contact",
@@ -204,7 +205,9 @@
       "email": "Contact email",
       "message": "What you need",
       "messagePlaceholder": "Tell us what you have in mind, when you need it and which reference you like.",
-      "privacy": "I agree that Paleoware may use this data to answer my enquiry.",
+      "privacyPrefix": "I declare that I have read and accept the",
+      "privacyLink": "Paleoware privacy policy",
+      "privacySuffix": ".",
       "submit": "Send enquiry",
       "submitted": "Enquiry received",
       "sending": "Sending…",
@@ -231,7 +234,7 @@
     "pageTitle": "Paleoware cookie policy",
     "updated": "Last updated: 18 November 2026",
     "intro": "This policy explains how Paleoware uses cookies and similar technologies on paleoware.com.",
-    "responsible": "Responsible party: Marcos Andres Ortega. Contact: info@paleoware.com · +54 11 3411-7299.",
+    "responsible": "Responsible party: Marcos Andres Ortega · CUIT: 20-40430741-0. Contact: info@paleoware.com · +54 11 3411-7299.",
     "sections": [
       { "title": "What are cookies?", "body": "Cookies are small files that a website may store in a browser. Similar technologies, such as localStorage and sessionStorage, may also be used to remember preferences and maintain basic functions." },
       { "title": "Necessary technologies", "body": "Paleoware uses technical storage to remember light and dark mode, maintain certain navigation preferences, store the cookie decision and protect the contact form from spam through Cloudflare Turnstile. These technologies are not used to build advertising profiles." },
@@ -242,6 +245,27 @@
       { "title": "Deleting storage", "body": "You can delete cookies and browser storage through your browser settings. Some visual or navigation preferences may be lost when you do so." },
       { "title": "Changes and contact", "body": "This policy may be updated when the technologies or providers we use change. For cookie and privacy questions, write to info@paleoware.com." }
     ]
+  },
+  "Privacy": {
+    "home": "Home",
+    "pageTitle": "Paleoware privacy policy",
+    "updated": "Last updated: 18 November 2026",
+    "intro": "This policy explains what information we may receive, why we use it and how you can exercise your rights.",
+    "responsible": "Responsible party: Marcos Andres Ortega · CUIT: 20-40430741-0. Contact: info@paleoware.com · +54 11 3411-7299.",
+    "sections": [
+      { "title": "Information we may receive", "body": "We may receive your name, email address, phone number, written messages, audio recordings, images, documents or other files you voluntarily send. We may also receive information about your project, business or requested service, details needed to arrange a meeting and technical information related to the operation of the form and security services. This information may arrive through the website form, email, WhatsApp, Instagram, Facebook or any other channel you choose to use." },
+      { "title": "How we use the information", "body": "We use the information to answer enquiries, understand project needs, prepare quotes or proposals, arrange meetings and communications, send information related to an enquiry you started, provide contracted services and comply with legal obligations. Technical information may also be used to operate the site and form. Paleoware does not sell or rent personal data." },
+      { "title": "Temporary retention of information", "body": "Phone numbers, audio recordings, images, documents and messages may be kept for as long as necessary to answer an enquiry, understand the project, prepare a proposal or arrange a service. When they are no longer needed, we seek to delete or anonymise them. We do not keep this information indefinitely. If an enquiry leads to a commercial relationship, some data may be kept for as long as necessary to manage the service, document the relationship or comply with legal obligations." },
+      { "title": "Providers that may be involved", "body": "To operate Paleoware, we may use Cloudflare for hosting, infrastructure and technical services; Cloudflare Turnstile to verify form submissions; Resend to send messages received through the form; Google Analytics to measure site usage when you give consent; and WhatsApp, Instagram or Facebook when you choose to contact us through those services. Some providers may process information on servers outside Argentina and apply their own privacy policies. Paleoware does not use received data to build advertising profiles or sell information to third parties." },
+      { "title": "Google Analytics", "body": "Google Analytics is disabled by default and only activated when you accept analytics technologies through the cookie banner. It may then collect information about visits, pages viewed, language, general traffic source and interactions with the site. You can change your decision through the Cookie preferences link." },
+      { "title": "Your rights", "body": "You may request access to the personal data we retain, correction or updating of inaccurate information, deletion of data that is no longer needed, information about how your data is used and an end to commercial communications. You may also withdraw consent where applicable. To make a request, write to info@paleoware.com with your name, the channel used to contact us and a clear description of your request. We will respond within the time limits applicable under current law." },
+      { "title": "Communications", "body": "We only send communications related to an enquiry, proposal or service you requested. If we send commercial communications in the future, you may ask us to stop at any time by writing to info@paleoware.com." },
+      { "title": "Children", "body": "Paleoware does not intentionally seek to collect personal data from children. If a parent or responsible adult believes that a child has sent us information, they may request its deletion by writing to our contact email." },
+      { "title": "External links", "body": "The site may contain links to WhatsApp, Instagram, Facebook or other third-party sites. When you access those services, your information is subject to each provider's privacy policies and terms. Paleoware does not control how those services process information outside our site." },
+      { "title": "Changes to this policy", "body": "We may update this Privacy Policy when our practices, the services we use or applicable law change. The current version will always be available on this page and will show its update date." },
+      { "title": "Contact", "body": "If you have questions about this policy or how your personal data is handled, write to info@paleoware.com. Marcos Andres Ortega · CUIT: 20-40430741-0 · +54 11 3411-7299." }
+    ],
+    "argentinaNote": "Data subjects may exercise their right of access to their data free of charge at intervals of no less than six months, unless a legitimate interest is established under applicable law. The Agencia de Acceso a la Información Pública is the supervisory authority for Law No. 25,326 on the Protection of Personal Data in Argentina."
   },
   "Footer": {
     "statement": "Custom sites for projects that refuse to go extinct.",

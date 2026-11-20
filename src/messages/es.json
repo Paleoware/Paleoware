@@ -13,6 +13,7 @@
     "services": "Servicios",
     "about": "Acerca de Paleoware",
     "cookies": "Política de cookies",
+    "privacy": "Política de privacidad",
     "cookieSettings": "Preferencias de cookies",
     "faq": "Preguntas",
     "contact": "Contacto",
@@ -204,7 +205,9 @@
       "email": "Mail de contacto",
       "message": "Qué necesitás",
       "messagePlaceholder": "Contanos qué tenés en mente, para cuándo y qué referencia te gusta.",
-      "privacy": "Acepto que Paleoware use estos datos para responder mi consulta.",
+      "privacyPrefix": "Declaro que he leído y acepto la",
+      "privacyLink": "política de privacidad de Paleoware",
+      "privacySuffix": ".",
       "submit": "Enviar consulta",
       "submitted": "Consulta recibida",
       "sending": "Enviando…",
@@ -231,7 +234,7 @@
     "pageTitle": "Política de cookies de Paleoware",
     "updated": "Última actualización: 18/11/2026",
     "intro": "Esta política explica cómo Paleoware utiliza cookies y tecnologías similares en paleoware.com.",
-    "responsible": "Responsable: Marcos Andres Ortega. Contacto: info@paleoware.com · +54 11 3411-7299.",
+    "responsible": "Responsable: Marcos Andres Ortega · CUIT: 20-40430741-0. Contacto: info@paleoware.com · +54 11 3411-7299.",
     "sections": [
       { "title": "¿Qué son las cookies?", "body": "Las cookies son pequeños archivos que un sitio puede almacenar en el navegador. También pueden utilizarse tecnologías similares, como localStorage y sessionStorage, para recordar preferencias y mantener funciones básicas." },
       { "title": "Tecnologías necesarias", "body": "Paleoware utiliza almacenamiento técnico para recordar el modo claro u oscuro, mantener algunas preferencias de navegación, guardar la decisión sobre cookies y proteger el formulario contra spam mediante Cloudflare Turnstile. Estas tecnologías no se utilizan para crear perfiles publicitarios." },
@@ -242,6 +245,27 @@
       { "title": "Cómo borrar el almacenamiento", "body": "Podés eliminar cookies y almacenamiento desde la configuración de tu navegador. Algunas preferencias visuales o de navegación pueden perderse al hacerlo." },
       { "title": "Cambios y contacto", "body": "La política puede actualizarse si cambian las tecnologías o proveedores utilizados. Para consultas sobre cookies y privacidad, escribí a info@paleoware.com." }
     ]
+  },
+  "Privacy": {
+    "home": "Inicio",
+    "pageTitle": "Política de privacidad de Paleoware",
+    "updated": "Última actualización: 18/11/2026",
+    "intro": "Esta política explica qué información podemos recibir, para qué la utilizamos y cómo podés ejercer tus derechos.",
+    "responsible": "Responsable: Marcos Andres Ortega · CUIT: 20-40430741-0. Contacto: info@paleoware.com · +54 11 3411-7299.",
+    "sections": [
+      { "title": "Qué datos podemos recibir", "body": "Podemos recibir tu nombre, dirección de correo electrónico, número de teléfono, mensajes escritos, audios, imágenes, documentos u otros archivos que envíes voluntariamente. También podemos recibir información sobre tu proyecto, negocio o servicio solicitado, datos necesarios para coordinar una reunión e información técnica relacionada con el funcionamiento del formulario y los servicios de seguridad. Estos datos pueden llegar mediante el formulario del sitio web, correo electrónico, WhatsApp, Instagram, Facebook u otros canales que decidas utilizar." },
+      { "title": "Para qué utilizamos los datos", "body": "Utilizamos la información para responder consultas, comprender las necesidades del proyecto, preparar presupuestos o propuestas, coordinar reuniones y comunicaciones, enviar información relacionada con una consulta iniciada por vos, prestar los servicios contratados y cumplir obligaciones legales. También puede utilizarse información técnica para gestionar el funcionamiento del sitio y del formulario. Paleoware no vende ni alquila datos personales." },
+      { "title": "Conservación temporal de la información", "body": "Los teléfonos, audios, imágenes, documentos y mensajes pueden conservarse durante el tiempo necesario para responder la consulta, comprender el proyecto, preparar una propuesta o coordinar la prestación de un servicio. Cuando dejan de ser necesarios, procuramos eliminarlos o anonimizarlos. No conservamos esta información de manera indefinida. Si una consulta da lugar a una relación comercial, algunos datos podrán conservarse durante el tiempo necesario para gestionar el servicio, documentar la relación o cumplir obligaciones legales." },
+      { "title": "Proveedores que pueden intervenir", "body": "Para operar Paleoware podemos utilizar Cloudflare para el alojamiento, la infraestructura y servicios técnicos; Cloudflare Turnstile para verificar los envíos del formulario; Resend para enviar los mensajes recibidos mediante el formulario; Google Analytics para medir el uso del sitio cuando otorgues tu consentimiento; y WhatsApp, Instagram o Facebook cuando decidas comunicarte mediante esos servicios. Algunos proveedores pueden procesar información en servidores ubicados fuera de Argentina y aplican sus propias políticas de privacidad. Paleoware no utiliza los datos recibidos para crear perfiles publicitarios ni para vender información a terceros." },
+      { "title": "Google Analytics", "body": "Google Analytics permanece desactivado por defecto y solo se activa cuando aceptás las tecnologías de analítica mediante el banner de cookies. En ese caso, puede recopilar información sobre visitas, páginas consultadas, idioma, origen general de la visita e interacciones con el sitio. La decisión puede modificarse desde el enlace Preferencias de cookies." },
+      { "title": "Derechos de las personas", "body": "Podés solicitar acceso a los datos personales que conservamos, corrección o actualización de información incorrecta, eliminación de datos que ya no sean necesarios, información sobre el uso de tus datos y cese de comunicaciones comerciales. También podés retirar un consentimiento previamente otorgado cuando corresponda. Para realizar una solicitud, escribí a info@paleoware.com indicando tu nombre, el medio utilizado para contactarnos y una descripción clara de tu pedido. Responderemos dentro de los plazos aplicables según la normativa vigente." },
+      { "title": "Comunicaciones", "body": "Solo enviaremos comunicaciones relacionadas con una consulta, propuesta o servicio solicitado. Si en el futuro enviamos comunicaciones comerciales, podrás solicitar dejar de recibirlas en cualquier momento escribiendo a info@paleoware.com." },
+      { "title": "Menores de edad", "body": "Paleoware no busca recopilar intencionalmente datos personales de menores de edad. Si una persona adulta responsable considera que un menor nos envió información, puede solicitar su eliminación escribiendo a nuestro email de contacto." },
+      { "title": "Enlaces externos", "body": "El sitio puede contener enlaces a WhatsApp, Instagram, Facebook u otros sitios de terceros. Al acceder a esos servicios, la información queda sujeta a las políticas de privacidad y condiciones de cada proveedor. Paleoware no controla el tratamiento que dichos servicios realizan fuera de nuestro sitio." },
+      { "title": "Cambios en esta política", "body": "Podemos actualizar esta Política de Privacidad cuando cambien nuestras prácticas, los servicios utilizados o la normativa aplicable. La versión vigente estará siempre disponible en esta página e indicará su fecha de actualización." },
+      { "title": "Contacto", "body": "Si tenés preguntas sobre esta política o sobre el tratamiento de tus datos personales, podés escribirnos a info@paleoware.com. Marcos Andres Ortega · CUIT: 20-40430741-0 · +54 11 3411-7299." }
+    ],
+    "argentinaNote": "El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a sus datos en forma gratuita a intervalos no inferiores a seis meses, salvo que exista un interés legítimo conforme a la normativa aplicable. La Agencia de Acceso a la Información Pública es el órgano de control de la Ley N.º 25.326 de Protección de Datos Personales de la República Argentina."
   },
   "Footer": {
     "statement": "Sitios a medida para proyectos que no quieren extinguirse.",

@@ -1499,6 +1499,19 @@ body[data-menu-open="true"] .site-footer {
   flex: none;
 }
 
+.consent a {
+  color: var(--cian);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.consent a:hover,
+.consent a:focus-visible {
+  color: var(--ink);
+}
+
 .contact-form__turnstile {
   min-height: 65px;
 }

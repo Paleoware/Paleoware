@@ -74,6 +74,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}/en/cookies/`,
       alternates: { languages: { es: `${siteConfig.url}/es/cookies/`, en: `${siteConfig.url}/en/cookies/` } },
     },
+    {
+      url: `${siteConfig.url}/es/privacidad/`,
+      alternates: { languages: { es: `${siteConfig.url}/es/privacidad/`, en: `${siteConfig.url}/en/privacy/` } },
+    },
+    {
+      url: `${siteConfig.url}/en/privacy/`,
+      alternates: { languages: { es: `${siteConfig.url}/es/privacidad/`, en: `${siteConfig.url}/en/privacy/` } },
+    },
     ...servicePages,
   ]
 }
